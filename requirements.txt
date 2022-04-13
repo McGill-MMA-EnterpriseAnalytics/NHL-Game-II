@@ -12,6 +12,7 @@ pandas>=0.19
 seaborn>=0.11.2
 lightgbm>=3.3.2
 flasgger==0.9.4
+ruamel_yaml==0.11.14
 streamlit
 
 
