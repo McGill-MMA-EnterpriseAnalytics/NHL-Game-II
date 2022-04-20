@@ -5,7 +5,7 @@ NHL-Game Part 2 (Productionisation) Analysis 🥅 🏒
 **Team Name**: NHL Pros \
 **Product Manager**: Anqi Chen (angelach99) \
 **Business Analyst**: Matthew Buttler Ives (matt-buttlerives) \
-**Data Engineer**: vaibhav Visual (vvaibhav1), Hadyan Fahreza (hifahreza), Mesaye Bahiru (mesaye3), Rebecca Mukena Yumba (beccarem) \
+**Data Engineer**: vaibhav Visual (vvaibhav11), Hadyan Fahreza (hifahreza), Mesaye Bahiru (mesaye3), Rebecca Mukena Yumba (beccarem) \
 **Data Scientist**: Louis D'Hulst (louis-dhulst)
 
 
