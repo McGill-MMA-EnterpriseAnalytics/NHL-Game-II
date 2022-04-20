@@ -18,7 +18,20 @@ Please notice that there could be documents of previous versions. Here are the l
   - Model performance: [ModelPerformance.ipynb](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/modeling/ModelPerformance.ipynb)
 
 - [Productionization](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/tree/main/docker_kubernetes):
-
+  - Main Files (used for docker container, kubernetes cluster deployed on GCP)
+    - Dockerfile
+    - Classifier.pkl
+    - requirements.txt (containes relevant packages needed to run ML model and Front end application)
+    - swagger_api.py (Front end application)
+  - Reference files
+    - Betting_Model.ipynb (sample of model script used to build pickle file)
+    - flask_api.py (Basic user interface built using postman in local)
+    - streamlit_api.py (Another front end application built using streamlit in local)
+    - train.csv (sample of train data)
+    - test.csv (sample of test data)
+    - docker_kubernetes_gcp_cmds.txt (commands used to setup application using docker and kubernetes in GCP cloud shell)
+    - nhl_app_arch_v1.pptx
+  Note: In GCP swagger was used and streamlit and flask/postman user interface were tested in local.
 
 ## Overview and Business implication
 
