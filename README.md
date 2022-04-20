@@ -5,7 +5,7 @@ NHL-Game Part 2 (Productionisation) Analysis 🥅 🏒
 **Team Name**: NHL Pros \
 **Product Manager**: Anqi Chen (angelach99) \
 **Business Analyst**: Matthew Buttler Ives (matt-buttlerives) \
-**Data Engineer**: vaibhav Visual (vvaibhav11), Hadyan Fahreza (hifahreza), Mesaye Bahiru (mesaye3), Rebecca Mukena Yumba (beccarem) \
+**Data Engineer**: Vaibhav Vishal (vvaibhav11), Hadyan Fahreza (hifahreza), Mesaye Bahiru (mesaye3), Rebecca Mukena Yumba (beccarem) \
 **Data Scientist**: Louis D'Hulst (louis-dhulst)
 
 
@@ -78,9 +78,14 @@ The static dataset is [Period_1_Game_Stats_Final_ModelReady(April-10th-2022).csv
 
 
 ## Docker & Kubernetes
+We explored another option to productionize the machine learning model using docker and kubernetes. It was implemented in local environment and Google cloud platform (GCP) to check in live environment. Docker file was set up and relevent commands to set up environment, directory, load requirements, scripts, pickle file generated from machine learning script were added to build and run docker container. In local we did in docker desktop and on GCP docker was put on container registry. In local the application which was made with swagger was hosted and simulator and feature for uploading test file and getting prediction was tested. On GCP, kuberneters cluster was configured and docker container was deployed and our application (swagger) was exposed live on internet and was working efficiently. 
 
+Further, on User Interface we tried Streamlit and basic Flask API using Postman along with Swagger API, however went with swagger for testing in GCP as we were able to incorporate GET and POST feature in application and was easy to integrate on Cloud.
 
+On Autiomation, cron job for triggering pickle file and updating docker which will refresh the simulator/app was built and tested on local environment. full access to tools/softwares instead of trial or community version can help to implement on cloud and live environment. It is a part of future scope.
 
+## Tools/Softwares/Programming Languages used,
+Python, Databricks, Databricks delta lake/visualization features, Docker desktop, Google cloud platform (container registry, kubernetes, vm instance), GITHub, Streamlit, Swagger, Flask API, Postman, Anaconda
 
 
 
