@@ -83,11 +83,28 @@ The static dataset is [Period_1_Game_Stats_Final_ModelReady(April-10th-2022).csv
 
 
 ### Hyperparameter tuning
+Overall, three different hyperparameter tuning methods are used to obtain the optimal hyperparameters: GridSearchCV, Bayesian Optimization, ane HyperOpt with MLFlow. 
 
+For GridSearchCV, it contains learning_rate, max_depth, and num_leaves, and their corresponding optinal values are 0.06, 10, and 31 respectively. The optimal score is 0.661. 
+
+For Bayesian Optimization, there had been problems when implementing to lightGBM model. And since Random Forest performs similarly to lightGBM model, we used Bayesian Optimization to optimize the hyperparameters of Random Forest model. The hyperparameters we used are n_estimators, min_samples_split, and max_features. The optimal values are 0.35, 20.44, and 240 respectively. 
+
+And lastly, we used HyperOpt with MLFlow to the lightGBM models. The optimal loss is 0.64. And the optimal values for the hyperparameters are:
+- subsample_for_bin: 200000
+- verbose: -1
+- boosting_type: gbdt
+- keep_training_booster: False
+- subsample_freq: 0
+- evals_result: None
+- colsample_bytree: 1.0
+- num_boost_round: 47
+
+The optimal F1 score is 0.6611. 
 
 ### Dashboards
+We created two dashboards in total. One is for the model prediction, and one is for the streaming data.
 
-
+For the dashboard of model prediction, we utilized the dashboard function in Databricks to create dashboard directly from our code. You can find the dashboard here [Dashboard_prediction.png](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/modeling/Dashboard/Dashboard_prediction.png).
 
 
 
