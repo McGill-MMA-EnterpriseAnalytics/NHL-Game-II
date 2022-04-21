@@ -31,6 +31,7 @@ Please notice that there could be documents of previous versions. Here are the l
     - test.csv (sample of test data)
     - docker_kubernetes_gcp_cmds.txt (commands used to setup application using docker and kubernetes in GCP cloud shell)
     - nhl_app_arch_v1.pptx
+  
   Note: In GCP swagger was used and streamlit and flask/postman user interface were tested in local.
 
 ## Overview and Business implication
