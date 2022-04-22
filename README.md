@@ -70,7 +70,7 @@ The static dataset is [Period_1_Game_Stats_Final_ModelReady(April-10th-2022).csv
 
 
 ## Streaming real-time data from Sportsradar
-
+Please watch the following video for a live demo on how the SportsRadar API works and how we use data from the API as variables inserted into our model: (https://www.youtube.com/watch?v=xbRfSmEG2io)
 
 
 
