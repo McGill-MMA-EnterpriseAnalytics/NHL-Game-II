@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<!-- saved from url=(0119)https://community.cloud.databricks.com/?o=1911856728025970#notebook/1076761207328622/dashboard/2432988394733026/present -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="google" content="notranslate"><meta http-equiv="Content-Language" content="en"><title>Game Statistics Dashboard - Databricks Community Edition</title><link rel="preload" href="https://community.cloud.databricks.com/pub-conf" as="fetch" crossorigin=""><link rel="preload" href="https://community.cloud.databricks.com/workspaces" as="fetch" crossorigin=""><link rel="icon" href="https://community.cloud.databricks.com/favicon.ico"><script type="text/javascript" async="" src="./Game Statistics Dashboard - Databricks Community Edition_files/heap-3428506230.js.download"></script><script defer="defer" src="./Game Statistics Dashboard - Databricks Community Edition_files/main.28c3e037.js.download"></script><link rel="preload" href="https://community.cloud.databricks.com/js/265.3ad79cf4.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/3961.0340df6c.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/6874.fdee06a1.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/1435.b44077be.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/9897.3e95fdd2.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/2368.b5d6b718.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/2241.296f6c2a.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/1831.b4e9f747.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/8687.d29f7892.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/3315.cbbda80a.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/5463.c0497674.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/6373.1f043b2c.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/4817.92a286de.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/4005.60ef1ef1.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/7177.f2a13d4d.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/9982.52705ede.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/9622.32eaae8f.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/7682.dcc39dcc.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/1826.3f8ee844.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/7414.0d648cb1.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/6638.2cdb7ba7.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/6617.d700873b.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/4287.8519cc0d.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/740.1ba53506.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/7973.74903f69.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/2131.0a22c001.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/2717.5976e517.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/736.24f4531e.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/7814.06c77740.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/8397.bb51b0f1.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/9957.e844fe05.chunk.js" as="script"><link rel="preload" href="./Game Statistics Dashboard - Databricks Community Edition_files/6823.ef02c8db.chunk.css" as="style"><link rel="preload" href="./Game Statistics Dashboard - Databricks Community Edition_files/9018.b0960582.chunk.css" as="style"><link rel="preload" href="./Game Statistics Dashboard - Databricks Community Edition_files/3061.632ce97e.chunk.css" as="style"><link rel="preload" href="./Game Statistics Dashboard - Databricks Community Edition_files/8687.8261acdc.chunk.css" as="style"><link rel="preload" href="./Game Statistics Dashboard - Databricks Community Edition_files/7177.8239daa4.chunk.css" as="style"><link rel="preload" href="https://community.cloud.databricks.com/css/ReactNotebookView.68ddf7ec.chunk.css" as="style"><link rel="preload" href="https://community.cloud.databricks.com/js/265.3ad79cf4.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/3961.0340df6c.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/6874.fdee06a1.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/1435.b44077be.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/5449.26bbd0de.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/8561.36bc28be.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/296.352a2fd9.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/615.7b5a7f25.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/7414.0d648cb1.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/6638.2cdb7ba7.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/6617.d700873b.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/4287.8519cc0d.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/740.1ba53506.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/7973.74903f69.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/2131.0a22c001.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/3584.5b823085.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/8827.4a78799d.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/2205.cbbcc38e.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/7994.f058ec6c.chunk.js" as="script"><link rel="preload" href="./Game Statistics Dashboard - Databricks Community Edition_files/6823.ef02c8db.chunk.css" as="style"><link rel="preload" href="./Game Statistics Dashboard - Databricks Community Edition_files/9018.b0960582.chunk.css" as="style"><link rel="preload" href="https://community.cloud.databricks.com/css/ScheduleLink.1a0cef1f.chunk.css" as="style"><link rel="stylesheet" type="text/css" href="./Game Statistics Dashboard - Databricks Community Edition_files/5126.1b33304e.chunk.css"><link rel="stylesheet" type="text/css" href="./Game Statistics Dashboard - Databricks Community Edition_files/8473.a91be41f.chunk.css"><link rel="stylesheet" type="text/css" href="./Game Statistics Dashboard - Databricks Community Edition_files/1349.6b186478.chunk.css"><style data-emotion="css" data-s=""></style><link rel="stylesheet" type="text/css" href="./Game Statistics Dashboard - Databricks Community Edition_files/6823.ef02c8db.chunk.css"><link rel="stylesheet" type="text/css" href="./Game Statistics Dashboard - Databricks Community Edition_files/9018.b0960582.chunk.css"><link rel="stylesheet" type="text/css" href="./Game Statistics Dashboard - Databricks Community Edition_files/3061.632ce97e.chunk.css"><link rel="stylesheet" type="text/css" href="./Game Statistics Dashboard - Databricks Community Edition_files/8687.8261acdc.chunk.css"><link rel="stylesheet" type="text/css" href="./Game Statistics Dashboard - Databricks Community Edition_files/7177.8239daa4.chunk.css"><link rel="stylesheet" type="text/css" href="./Game Statistics Dashboard - Databricks Community Edition_files/DashboardEditView.ea078db7.chunk.css"><script src="./Game Statistics Dashboard - Databricks Community Edition_files/remoteEntry.js.download" async=""></script><style id="plotly.js-style-global"></style><link rel="prefetch" href="https://community.cloud.databricks.com/media/pin-inactive.76cfbd5a.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/jupyter_favicon.e5618ffc.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/pin-active.3f997394.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/azure_devops_logo_hover.afd8ec9e.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/azure_devops_logo.6f8531ab.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/glyphicons-halflings.191ce105.png"><link rel="prefetch" href="https://community.cloud.databricks.com/media/newslablight-webfont.43dee4a4.eot"><link rel="prefetch" href="https://community.cloud.databricks.com/media/newslablight-webfont.1139d78a.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/newslablight-webfont.c8d2ffdf.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/newslablight-webfont.4d6d4f4c.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/newslablight-webfont.6db3f979.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/databricks-regular-webfont.c3085bea.eot"><link rel="prefetch" href="https://community.cloud.databricks.com/media/databricks-regular-webfont.de65de42.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/databricks-regular-webfont.977f0ff5.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/databricks-regular-webfont.2f9a86b4.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/fontawesome-webfont.03605b24.eot"><link rel="prefetch" href="https://community.cloud.databricks.com/media/fontawesome-webfont.c589f72d.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/fontawesome-webfont.45f9f92a.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/fontawesome-webfont.d0ba16d8.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/Material-Design-Iconic-Font.6ee80f4b.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/Material-Design-Iconic-Font.bd9b02bf.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/Material-Design-Iconic-Font.5a588d6a.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_AMS-Regular.8d510e21.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_AMS-Regular.363668e4.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_AMS-Regular.79770839.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Caligraphic-Bold.0408dbd1.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Caligraphic-Bold.dce5f226.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Caligraphic-Bold.9958c13a.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Caligraphic-Regular.8cb339d8.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Caligraphic-Regular.a0f19b9a.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Caligraphic-Regular.f35e6d32.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Fraktur-Bold.e9f666bf.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Fraktur-Bold.581882ea.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Fraktur-Bold.6fc2b891.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Fraktur-Regular.8fafd264.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Fraktur-Regular.d3067917.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Fraktur-Regular.37f0101f.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Main-Bold.e4830ce6.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Main-Bold.77475ba5.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Main-Bold.b097bb94.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Main-BoldItalic.baab209e.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Main-BoldItalic.5994f793.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Main-BoldItalic.4ab8a635.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Main-Italic.fdfec592.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Main-Italic.a15e0ae8.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Main-Italic.ac680e98.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Main-Regular.c904829c.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Main-Regular.9d3ff6bd.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Main-Regular.ad5bb259.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Math-Italic.d0dd29d1.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Math-Italic.80956401.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Math-Italic.75d88e39.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_SansSerif-Bold.1849da20.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_SansSerif-Bold.5a8b0e8c.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_SansSerif-Bold.8a18ba89.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_SansSerif-Italic.acb5dce2.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_SansSerif-Italic.e7517a35.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_SansSerif-Italic.3e7cf777.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_SansSerif-Regular.167f81e8.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_SansSerif-Regular.1bb5e535.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_SansSerif-Regular.7c572bf7.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Script-Regular.49ff882d.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Script-Regular.7e1d6987.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Script-Regular.c73c9054.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Size1-Regular.98c1c5ee.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Size1-Regular.6dff5232.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Size1-Regular.41fbe509.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Size2-Regular.9f44db0b.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Size2-Regular.758926c6.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Size2-Regular.8f1e2ab9.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Size3-Regular.943a01ec.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Size3-Regular.d27d182e.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Size3-Regular.32abfb10.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Size4-Regular.31bd0319.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Size4-Regular.47db69ec.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Size4-Regular.9ee4a1fd.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Typewriter-Regular.aa9fe3f6.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Typewriter-Regular.663eef93.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/KaTeX_Typewriter-Regular.73160645.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/fontawesome-webfont.8b43027f.eot"><link rel="prefetch" href="https://community.cloud.databricks.com/media/fontawesome-webfont.20fd1704.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/fontawesome-webfont.f691f37e.woff"><link rel="prefetch" href="https://community.cloud.databricks.com/media/fontawesome-webfont.1e59d233.ttf"><link rel="prefetch" href="https://community.cloud.databricks.com/media/fontawesome-webfont.c1e38fd9.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/spritemap.ac65e273.png"><link rel="prefetch" href="https://community.cloud.databricks.com/media/spritemap@2x.7410259a.png"><link rel="prefetch" href="https://community.cloud.databricks.com/media/SourceCodePro-Regular.otf.b886e5e4.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/SourceCodePro-Bold.otf.0fab52a9.woff2"><link rel="prefetch" href="https://community.cloud.databricks.com/media/spinner_green.64cba84f.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/spinner_red.dfdea22c.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/login/login.47926ab1.js"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/main.28c3e037.js.download"><link rel="prefetch" href="https://community.cloud.databricks.com/js/metrics-graphics.240ef397.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/7251.95fc2945.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/login/7251.8c659cfe.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/BMT_logo_large.06a08317.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/databricks_community_edition.2359b37e.png"><link rel="prefetch" href="https://community.cloud.databricks.com/login/6499.fedff81a.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/7603.aa36561a.chunk.js"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/1349.6b186478.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/1349.2e50bb47.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/partner-connect-icon.8a202243.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/alert.49c5db30.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/blocked.a81a311f.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/book.31f15827.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/branch.3a7e8c0d.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/cancelled.2ad6d232.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/circle_error.e3c3b9a4.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/cloud.8b8c5eb0.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/cluster.4a93f2e9.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/dashboard.8758e581.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/data-quality.1e5b9672.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/expand-icon-flipped.77c0871a.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/fa-columns.76f151f6.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/fa-table.015b0dc7.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/failed.789ca99e.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/filled-gray-circle.7d2d5039.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/filled-green-circle.ed636499.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/folder.78745b36.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/paused.536d6b5d.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/pending.b8ba238e.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/query.35fed909.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/running.ec723323.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/skipped.b25c88c7.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/spinner_blue.8d29a816.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/success.a741e81b.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/table.7b8cc615.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/terminated.63ea598d.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/timed_out.3857e04c.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/waiting.6f50f9b4.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/warning.6198e47b.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/login/9882.7556e9e0.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/7043.21b43089.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/8062.11dbe846.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/2957.9f99525d.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/5649.7878ab16.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/8538.9a6cf4ae.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/969.6bf80188.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/862.51b04181.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/5396.b306568e.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/9565.9ad08ba9.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/462.952815d1.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9820.5bab95cf.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/639.768a06d7.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/639.d8276d0a.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/8730.f2124aac.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/8730.7b113aba.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/6537.6e212bcd.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/stitch.34c97b52.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/fivetran.5bb015fe.png"><link rel="prefetch" href="https://community.cloud.databricks.com/media/infoworks.7df5f41f.png"><link rel="prefetch" href="https://community.cloud.databricks.com/media/qlik.4c6468fd.png"><link rel="prefetch" href="https://community.cloud.databricks.com/media/streamsets.3710f31a.png"><link rel="prefetch" href="https://community.cloud.databricks.com/media/syncsort.44d5ff89.jpg"><link rel="prefetch" href="https://community.cloud.databricks.com/css/GraphqlClustersGetPage.20009756.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/6471.6b9e370f.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/NewClustersEditPage.09fbd5ef.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/4602.7ab61ee7.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/ClustersMainPage.1c9a080c.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2851.a766ba08.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/SimpleClusterCreatePage.09fbd5ef.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/7028.313d9947.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/ClustersCreatePage.09fbd5ef.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9463.da593c56.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/PoolRoutesPages.8e6dfbe2.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/7274.b3176703.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/ClusterPoliciesRouteUtils.f3101d86.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/8540.8d62df5e.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3235.b0c75e7f.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/AdminConsoleView.3cd1bba7.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5198.cfc4bbcc.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/UserSettingsView.92c8234c.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9152.ecb54c6d.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/if_lightbulb.5e2e71fa.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/js/6362.27654e8a.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/import_illustration.4151f89c.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/notebook_illustration.d0d5ad3b.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/partner_connect_illustration.8a202243.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/quickstart_illustration.3c391acf.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/references_illustration.e67339f9.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/js/7032.7572d7be.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/General_icon.78cbb670.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/Python_icon.b89e5ec9.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/R_icon.c159ddc0.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/Scala_icon.d90ef464.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/add_data_icon.3b26b6be.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/code_icon.16b52873.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/help_doc_icon.679cb6f8.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/icon-import-data.2fb512d3.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/icon-new-notebook.2bc783e0.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/icon-quickstart-notebook.62cf29ed.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/icon-upload-data-non-drop-zone.e76fe775.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/icon-upload-data.3e579a80.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/persona_nav.35794a3b.gif"><link rel="prefetch" href="https://community.cloud.databricks.com/css/LibraryView.2e69635a.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2662.beedbf76.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/1511.12475684.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/ClustersGetMetricsPage.09fbd5ef.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5355.bcf82c4c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5148.d308de7a.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/PipelinesMainPage.46640809.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/1710.eab7735c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/7676.a3d7a7ae.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/collapsingAllIcon.734ff2cb.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/expandingAllIcon.53164af4.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3214.ae272d39.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2667.346c259c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/ml_dashboard_ill_automl.e024a05f.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/ml_dashboard_ill_feature_store.37dd40c0.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/ml_dashboard_ill_notebook.2993bcc7.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/ml_dashboard_ill_reference_solutions.8093cd75.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/ml_dashboard_ill_training.095fbd61.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/css/ExperimentObservatoryPage.eae8a832.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3637.5912802f.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/AutoMLConfigurationPage.3af21a7b.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2689.7b6b2141.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9981.ab3e6f39.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5197.fc4b3e76.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/8732.cb41214f.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3449.d55be0e4.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/199.4c6eb3b4.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/4286.b1e59071.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2384.691a4cb0.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3345.5e60f27e.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/CreateWorkspaceLibraryPage.a7702194.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/8553.b7373a0f.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/CreateMlflowExperimentPage.ee2d4c7e.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/6595.ae5d909c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/ScheduleLink.1a0cef1f.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/7994.f058ec6c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/419.a53bb5a3.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/ReactNotebookView.68ddf7ec.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9957.e844fe05.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/placeholder_pic.157f088b.png"><link rel="prefetch" href="https://community.cloud.databricks.com/media/tabbed_results_announce.2c4b9566.gif"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/DashboardEditView.ea078db7.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2882.03efce2b.chunk.js"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/DashboardPresentView.fceb6112.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/8985.c89f21e8.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/TableGetPage.e5f37737.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/4227.63f45c4a.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2184.8a58eb28.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/8155.c9616b56.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5402.61f8dd3d.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5244.61ebb5cb.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/2009.09fbd5ef.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2009.05795c52.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/mlflow_cluster_libraries_icon.adffc652.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/mlflow_cluster_spec_icon.001d116c.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/mlflow_notebook_revision_icon.8f838dbc.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3080.c9c93b1f.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5290.536d9da4.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/logged_model.dd9b21ff.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/registered_model.f2b0e698.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/view_notebook_revision.06996110.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/js/4136.0c92b01d.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5122.77668f56.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/countries.geo.da867aec.json"><link rel="prefetch" href="https://community.cloud.databricks.com/media/japan.prefectures.geo.503032a2.json"><link rel="prefetch" href="https://community.cloud.databricks.com/media/usa-albers.geo.4d6ceca8.json"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2713.f27cb942.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/7561.8de45682.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/265.3ad79cf4.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3961.0340df6c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/6874.fdee06a1.chunk.js"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/6823.ef02c8db.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/1435.b44077be.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9897.3e95fdd2.chunk.js"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/9018.b0960582.chunk.css"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/3061.632ce97e.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2368.b5d6b718.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2241.296f6c2a.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/1831.b4e9f747.chunk.js"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/8687.8261acdc.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/8687.d29f7892.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5449.26bbd0de.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3315.cbbda80a.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5463.c0497674.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/6373.1f043b2c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/4817.92a286de.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9487.6d0c3e50.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/4005.60ef1ef1.chunk.js"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/7177.8239daa4.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/7177.f2a13d4d.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9982.52705ede.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/8561.36bc28be.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9622.32eaae8f.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/7682.dcc39dcc.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/1202.1651745c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/296.352a2fd9.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/615.7b5a7f25.chunk.js"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/5126.1b33304e.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/login/5126.a3d96d5a.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5526.775fd734.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3112.229db2c0.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/9097.b7c5aca9.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/789.7055c3e7.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/6122.a583f800.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3953.bc4a0338.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5850.b9610775.chunk.js"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/8473.a91be41f.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/8473.6d11cc58.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/css/9822.c697d92c.chunk.css"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9822.a6f219f0.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/1826.3f8ee844.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/7628.be1062f4.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2180.77c8b226.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3949.0ba9a432.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/177.7d26e136.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2122.aeb0bf45.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/7414.0d648cb1.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/6638.2cdb7ba7.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/6617.d700873b.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/4287.8519cc0d.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/740.1ba53506.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/7973.74903f69.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2131.0a22c001.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5489.e0232314.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2717.5976e517.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/us-map.6cab3846.json"><link rel="prefetch" href="https://community.cloud.databricks.com/media/world-map.282fccf1.json"><link rel="prefetch" href="https://community.cloud.databricks.com/media/ellipse-2s-30px.df5b6e08.gif"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3584.5b823085.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/520.57827eea.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/6267.26b62d2c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/1342.f3c1945c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/736.24f4531e.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/400.ee52265e.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/8827.4a78799d.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/login/8484.2264fc4c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/media/spinner.7aa77051.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/media/bmt-favicon.dfa4ca84.ico"><link rel="prefetch" href="https://community.cloud.databricks.com/js/7814.06c77740.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9418.cfc92d91.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2630.4613696c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/367.378e8204.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/1913.37480a3a.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/3846.23b54ba1.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2205.cbbcc38e.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/8397.bb51b0f1.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/4332.4717d0c6.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/2960.d7334d50.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/5397.089d60be.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9628.69417888.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/9167.c719483d.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/4188.000cbe6c.chunk.js"><link rel="prefetch" href="https://community.cloud.databricks.com/js/438.be5d16dd.chunk.js"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/spinner.gif"><link rel="prefetch" href="https://community.cloud.databricks.com/login/DB_Azure_Lockup_2x.png"><link rel="prefetch" href="https://community.cloud.databricks.com/login/bootstrap.min.css"><link rel="prefetch" href="https://community.cloud.databricks.com/login/databricks_ce_icon.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/login/databricks_logoTM_rgb_TM.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/login/favicon.ico"><link rel="prefetch" href="https://community.cloud.databricks.com/login/logo_2020/azure_databricks.png"><link rel="prefetch" href="https://community.cloud.databricks.com/login/logo_2020/databricks.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/login/logo_2020/databricks_community_edition.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/databricks.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/download.svg"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/retrieve_config.html"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/sharing.css"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/sharing.js"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/apachespark.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/atscale.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/azuresynapse.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/bigquery.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/databricks.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/dremio.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/looker.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/pandas.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/powerbi.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/presto.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/python.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/qlik.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/starburst.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/tableau.png"><link rel="prefetch" href="https://community.cloud.databricks.com/delta_sharing/logo/trino.png"><link rel="prefetch" href="https://community.cloud.databricks.com/static/iframe.html"><link rel="prefetch" href="https://community.cloud.databricks.com/static/css/sparkui-iframe.css"><link rel="prefetch" href="https://community.cloud.databricks.com/static/js/heap/heap-1473692602.js"><link rel="prefetch" href="https://community.cloud.databricks.com/static/js/heap/heap-210092139.js"><link rel="prefetch" href="./Game Statistics Dashboard - Databricks Community Edition_files/heap-3428506230.js.download"><link rel="prefetch" href="https://community.cloud.databricks.com/favicon.ico"><link rel="prefetch" href="https://community.cloud.databricks.com/login.html"><script src="./Game Statistics Dashboard - Databricks Community Edition_files/remoteEntry.js(1).download" async=""></script><style type="text/css" id="react-draggable-style-el">.react-draggable-transparent-selection *::-moz-selection {all: inherit;}
+.react-draggable-transparent-selection *::selection {all: inherit;}
+</style><link rel="stylesheet" type="text/css" href="./Game Statistics Dashboard - Databricks Community Edition_files/DashboardPresentView.fceb6112.chunk.css"></head><body class="light-mode"><noscript>You need to enable JavaScript to run this app.</noscript><script>let logCount = 0;
+      function error_handler(message, source, lineno, colno, error) {
+        if (logCount++ > 4) {
+          return;
+        }
+        const ts = Math.round(Date.now() / 1000);
+        const options = {
+          method: 'POST',
+          credentials: 'include',
+          body: JSON.stringify({uploadTime: ts, items: [
+            JSON.stringify({
+              eventId: Array.from(window.crypto.getRandomValues(new Uint32Array(Math.ceil(12 / 8)))).map((x) => x.toString(16)).join('').substring(0, 12),
+              blob: error && error.stack && error.stack.toString(),
+              metric:'jsException',
+              tags: {
+                eventType: "jsExceptionV3",
+                jsExceptionMessage: message,
+                jsExceptionSource: source,
+                jsExceptionLineno: lineno,
+                jsExceptionColno: colno,
+                jsExceptionBeforeInit: true,
+              },
+              ts: ts,
+            }),
+          ]}),
+        };
+        fetch('/telemetry?t=' + Date.now(), options);
+      };
+      window.onerror = error_handler;
+      window.onunhandledrejection = function(event) {
+        error_handler(String(event.reason));
+      };
+      window.startupHangTimer = setTimeout(() => {
+        error_handler("Startup Hang: Did not init within 60 seconds");
+      }, 60000);
+      // Prefetch /pubconf, /workspaces, /config
+      // We wrap this in a function to not pollute the namespace
+      (function() {
+        const getParams = (paramsStr) => {
+          let match;
+          const pl = /\+/g; // Regex for replacing addition symbol with a space
+          const search = /([^&=]+)=?([^&]*)/g;
+          const decode = function decode(s) {
+            return decodeURIComponent(s.replace(pl, ' '));
+          };
+
+          const urlParams = {};
+          match = search.exec(paramsStr);
+          while (match) {
+            urlParams[decode(match[1])] = decode(match[2]);
+            match = search.exec(paramsStr);
+          }
+          return urlParams;
+        }
+
+        // If we can get it from the params, do that
+        const params = getParams(window.location.search.substr(1));
+        const workspaceParam = params?.o;
+
+        function fetchWorkspaceConfigUsingParam() {
+          let configUsingParamProm = null;
+          let configUsingParamOrgId = null;
+          if (workspaceParam) {
+            configUsingParamOrgId = workspaceParam.toString();
+            configUsingParamProm = fetch('/config', {headers: { 'X-Databricks-Org-Id': configUsingParamOrgId }});
+          }
+          return {
+            configUsingParamProm,
+            configUsingParamOrgId,
+          };
+        }
+
+        // Note that this function returns null in cases where there is no workspace or where we want the user to choose a workspace, since we
+        // are going to redirect the user anyways
+        const maybeGetOrgId = function(workspaceList, pubConf) {
+          if (workspaceParam) {
+            return workspaceParam;
+          }
+
+          // Otherwise we try to infer from the deployment name (apparently this doesn't work for AWS vanity URLs)
+          if (pubConf.inferOrgIdFromDeploymentName) {
+            const deploymentName = window.location.hostname
+                    .split('.')
+                    .slice(0, pubConf.numDeploymentNameHostnameLabels)
+                    .join('.');
+            const targetWorkspace = workspaceList.filter(w => deploymentName === w.deploymentName);
+            if (targetWorkspace.length > 0) {
+              return targetWorkspace[0].orgId;
+            }
+          }
+
+          // If we're just going to redirect the user anyways, don't try to fetch the config
+          if (pubConf.redirectBrowserOnWorkspaceSelection) {
+            return null;
+          }
+
+          // Otherwise, if there are either no available workspaces, or multiple confirmed ones, we return null since
+          // we will redirect the user anyways
+          const confirmedWorkspaces = workspaceList.filter((workspace) => !workspace.needsConfirmation);
+          // If there is exactly one confirmed workspace, then we'll pick that one.
+          // This is the common path for single tenant
+          if (confirmedWorkspaces.length === 1) {
+            return confirmedWorkspaces[0].orgId;
+          }
+
+          // otherwise we're not sure what workspace they want, so we don't prefetch
+          return null;
+        };
+
+
+        const pubConfProm = fetch('/pub-conf').then(r => {
+          if (r.status !== 200) {
+            throw new Error("Pub-conf Prefetch error: " + r.status);
+          }
+          return r.json();
+        }).then(json => window.pubConf = json);
+        const workspacesProm = fetch('/workspaces').then(r => {
+          if (r.status !== 200) {
+            throw new Error("Workspaces Prefetch error: " + r.status);
+          }
+          return r.json();
+        }).then(json => {
+          window.workspaces = json;
+        });
+        const { configUsingParamProm, configUsingParamOrgId } = fetchWorkspaceConfigUsingParam();
+
+        window.prefetchedSettingsProm = (async () => {
+          await Promise.all([pubConfProm, workspacesProm]);
+
+          const orgId = maybeGetOrgId(window.workspaces, window.pubConf);
+          let r;
+          if (configUsingParamProm && orgId && orgId === configUsingParamOrgId) {
+            r = await configUsingParamProm;
+          } else if (orgId != null) {
+            r = await fetch('/config', {headers: { 'X-Databricks-Org-Id': orgId.toString() }});
+          } else {
+            throw new Error("could not determine workspace");
+          }
+          if (r.status !== 200) {
+            throw new Error("Prefetch error: " + r.status);
+          }
+          return await r.json();
+        })();
+      })();</script><link rel="preload" href="./Game Statistics Dashboard - Databricks Community Edition_files/main.28c3e037.js.download" as="script"><link rel="preload" href="https://community.cloud.databricks.com/login/7043.21b43089.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/login/6499.fedff81a.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/login/7603.aa36561a.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/login/5126.a3d96d5a.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/8473.6d11cc58.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/login/8484.2264fc4c.chunk.js" as="script"><link rel="preload" href="https://community.cloud.databricks.com/js/1349.2e50bb47.chunk.js" as="script"><script>function preload(uris) {
+        uris.forEach(uri => {
+          const preload = document.createElement("link");
+          preload.rel = "preload";
+          preload.href = uri;
+          preload.as = uri.endsWith(".css") ? "style" : "script";
+          document.head.appendChild(preload);
+        });
+      }
+      const hash = window.location.hash;
+      
+      if (hash.indexOf("#notebook/") === 0) {
+        preload(["/js/265.3ad79cf4.chunk.js","/js/3961.0340df6c.chunk.js","/js/6874.fdee06a1.chunk.js","/js/1435.b44077be.chunk.js","/js/9897.3e95fdd2.chunk.js","/js/2368.b5d6b718.chunk.js","/js/2241.296f6c2a.chunk.js","/js/1831.b4e9f747.chunk.js","/js/8687.d29f7892.chunk.js","/js/3315.cbbda80a.chunk.js","/js/5463.c0497674.chunk.js","/js/6373.1f043b2c.chunk.js","/js/4817.92a286de.chunk.js","/js/4005.60ef1ef1.chunk.js","/js/7177.f2a13d4d.chunk.js","/js/9982.52705ede.chunk.js","/js/9622.32eaae8f.chunk.js","/js/7682.dcc39dcc.chunk.js","/js/1826.3f8ee844.chunk.js","/js/7414.0d648cb1.chunk.js","/js/6638.2cdb7ba7.chunk.js","/js/6617.d700873b.chunk.js","/js/4287.8519cc0d.chunk.js","/js/740.1ba53506.chunk.js","/js/7973.74903f69.chunk.js","/js/2131.0a22c001.chunk.js","/js/2717.5976e517.chunk.js","/js/736.24f4531e.chunk.js","/js/7814.06c77740.chunk.js","/js/8397.bb51b0f1.chunk.js","/js/9957.e844fe05.chunk.js","/css/6823.ef02c8db.chunk.css","/css/9018.b0960582.chunk.css","/css/3061.632ce97e.chunk.css","/css/8687.8261acdc.chunk.css","/css/7177.8239daa4.chunk.css","/css/ReactNotebookView.68ddf7ec.chunk.css"]);
+        preload(["/js/265.3ad79cf4.chunk.js","/js/3961.0340df6c.chunk.js","/js/6874.fdee06a1.chunk.js","/js/1435.b44077be.chunk.js","/js/5449.26bbd0de.chunk.js","/js/8561.36bc28be.chunk.js","/js/296.352a2fd9.chunk.js","/js/615.7b5a7f25.chunk.js","/js/7414.0d648cb1.chunk.js","/js/6638.2cdb7ba7.chunk.js","/js/6617.d700873b.chunk.js","/js/4287.8519cc0d.chunk.js","/js/740.1ba53506.chunk.js","/js/7973.74903f69.chunk.js","/js/2131.0a22c001.chunk.js","/js/3584.5b823085.chunk.js","/js/8827.4a78799d.chunk.js","/js/2205.cbbcc38e.chunk.js","/js/7994.f058ec6c.chunk.js","/css/6823.ef02c8db.chunk.css","/css/9018.b0960582.chunk.css","/css/ScheduleLink.1a0cef1f.chunk.css"]);
+      } else if (hash === '') {
+        preload(["/js/265.3ad79cf4.chunk.js","/js/6638.2cdb7ba7.chunk.js","/js/400.ee52265e.chunk.js","/js/7032.7572d7be.chunk.js","/css/6823.ef02c8db.chunk.css"]);
+        preload(["/js/265.3ad79cf4.chunk.js","/js/5526.775fd734.chunk.js","/js/6638.2cdb7ba7.chunk.js","/js/400.ee52265e.chunk.js","/js/6362.27654e8a.chunk.js"]);
+      } else if (hash.indexOf("#job/") === 0) {
+        if (typeof window !== "undefined" && typeof performance === "object" && performance.timeOrigin) {
+          preload(['/mfe/jaws/remoteEntry.js?t=' + (performance.timeOrigin)]);
+        }
+      }
+      
+      preload([]);</script><div id="skip-links"><div class="css-1thbak"><button id="skip-link-content" data-testid="skip-link-content" type="button" class="du-bois-light-btn du-bois-light-btn-sm css-yihl29">Skip to Content</button></div></div><uses-legacy-bootstrap data-wrapped-element-id="toolbar"><div id="toolbar"></div></uses-legacy-bootstrap><uses-legacy-bootstrap data-wrapped-element-id="tooltip"><div id="tooltip" class="hidden"><p><span id="value"></span></p></div></uses-legacy-bootstrap><uses-legacy-bootstrap data-wrapped-element-id="global-notification-container"><div id="global-notification-container"><div class="databricks-notification-wrapper"><div class="notifications-wrapper"></div></div></div></uses-legacy-bootstrap><div id="rmmodal-container"></div><uses-legacy-bootstrap data-wrapped-element-id="topbar"><div id="tb-action-banner-container"></div><div id="topbar" style="padding-left: 0px; display: none;"><span id="tb-page-title"></span><h1 class="tb-title-wrapper tb-title-wrapper-central" style="left: 0px;"><span class="tb-title"></span> <span class="tb-title-portal"></span> <span class="tb-title-lang"></span><div class="tb-status"><span class="tb-status-msg tb-status-msg-error"></span> <span class="tb-status-msg tb-status-msg-banner"></span> <span class="tb-status-msg tb-status-msg-locked"></span> <span class="tb-status-msg tb-status-msg-connecting">Connecting...&nbsp;</span> <span class="tb-status-msg tb-status-msg-waiting">Still working...&nbsp;</span> <img class="tb-status-spinner" src="./Game Statistics Dashboard - Databricks Community Edition_files/spinner.gif" alt="spinner"></div></h1><div class="tb-title-wrapper tb-title-wrapper-right"><div class="tb-trial-msg"></div><div class="tb-title-icons tb-title-icons-right"></div><div class="tb-status presence"><span class="tb-status-msg tb-status-presence"><!-- presenceTemplate -->
+
+<ul class="noselect">
+  
+  <li title="Recent Activity" class="presence-history" role="button" aria-label="Click to view Recent Activity">
+    <div><i class="fa fa-lg fa-clock-o" aria-hidden="true"></i></div>
+  </li>
+</ul>
+
+</span></div><div class="tb-notebook-schedule-link"></div><div class="tb-notebook-share-button"></div></div><div id="tb-invite-teammate"></div><div id="tb-upgrade"></div><a class="tb-button tb-button-right tb-button-upgrade" title="Upgrade" target="_blank"><span>Upgrade</span></a></div></uses-legacy-bootstrap><div id="app-root"><uses-legacy-bootstrap data-wrapped-element-id="sidebar"><div id="sidebar" class="sidebar"><div class="sidebar-outer hidden sidebar--theme-unified"><div data-testid="persona-nav-sidebar" class="css-1qq8bvn"><nav aria-label="Main Menu" data-expanded="false" class="css-1gbd1tu"><a aria-label="Databricks" href="https://community.cloud.databricks.com/?o=1911856728025970#" data-testid="DatabricksLogo" class="css-1iy4oqv"><span class="glyph css-2edx1n"><svg aria-hidden="true" width="24" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.72 10.562l-10.721 5.956L.543 10.152l-.543.3v4.627l11.998 6.672 10.722-5.959v2.458l-10.721 5.962-11.453-6.37-.546.3v.786L11.998 25.6 24 18.928v-4.631l-.543-.3-11.459 6.366L1.28 14.407V11.96L12 17.91 24 11.24V6.672l-.603-.331-11.398 6.338-10.15-5.647 10.15-5.644 8.364 4.65.744-.413v-.559L12 0 0 6.675v.716l11.998 6.672L22.72 8.104v2.458z"></path></svg></span><span class="persona-nav-expanded-text css-1z0rrpl" data-testid="PersonaMenuIconText"><svg aria-hidden="true" width="123" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#prefix__clip0)"><path d="M14.511 20.258V1.145H11.56V8.29c0 .104-.066.2-.167.238a.256.256 0 01-.279-.072c-1-1.168-2.555-1.838-4.27-1.838-3.646 0-6.503 3.067-6.503 6.986 0 1.92.667 3.69 1.876 4.985a6.262 6.262 0 004.628 2.002c1.684 0 3.241-.7 4.27-1.917a.256.256 0 01.28-.074c.1.036.167.132.167.238v1.423h2.95v-.004zm-7.003-2.336c-2.35 0-4.19-1.898-4.19-4.319 0-2.42 1.84-4.319 4.19-4.319 2.35 0 4.19 1.898 4.19 4.32 0 2.42-1.84 4.318-4.19 4.318zM30.266 20.258V6.948h-2.924v1.336a.253.253 0 01-.448.162c-.99-1.18-2.505-1.83-4.27-1.83-3.646 0-6.503 3.068-6.503 6.987s2.857 6.987 6.504 6.987c1.691 0 3.246-.707 4.267-1.938a.253.253 0 01.448.161v1.445h2.926zm-6.976-2.336c-2.35 0-4.19-1.898-4.19-4.319 0-2.421 1.84-4.319 4.19-4.319 2.35 0 4.19 1.898 4.19 4.32 0 2.42-1.84 4.318-4.19 4.318zM55.266 20.258V6.948h-2.924v1.336a.253.253 0 01-.448.162c-.99-1.18-2.506-1.83-4.27-1.83-3.646 0-6.503 3.068-6.503 6.987s2.857 6.987 6.504 6.987c1.69 0 3.245-.707 4.267-1.938a.255.255 0 01.45.162v1.444h2.924zm-6.974-2.336c-2.35 0-4.19-1.898-4.19-4.319 0-2.421 1.84-4.319 4.19-4.319 2.35 0 4.19 1.898 4.19 4.32 0 2.42-1.842 4.318-4.19 4.318zM60.627 18.677a.244.244 0 01.087-.015c.075 0 .145.032.192.09 1 1.168 2.555 1.838 4.27 1.838 3.646 0 6.504-3.068 6.504-6.987 0-1.919-.666-3.689-1.877-4.985a6.262 6.262 0 00-4.627-2.002c-1.685 0-3.242.7-4.27 1.917a.253.253 0 01-.448-.164l.007-7.227h-2.952l-.006 19.114h2.951v-1.343a.26.26 0 01.169-.236zm-.303-5.074c0-2.421 1.84-4.319 4.19-4.319 2.35 0 4.19 1.898 4.19 4.319 0 2.421-1.84 4.319-4.19 4.319-2.35 0-4.19-1.898-4.19-4.319zM80.174 9.671c.277 0 .535.024.714.066V6.723a2.396 2.396 0 00-.492-.05c-1.53 0-2.943.782-3.692 2.039a.253.253 0 01-.471-.13V6.948h-2.924v13.31h2.952v-5.853c0-2.919 1.499-4.734 3.913-4.734zM85.714 6.948h-2.98v13.31h2.98V6.948zM84.19 1.157c-.996 0-1.807.809-1.807 1.802a1.806 1.806 0 003.613 0 1.804 1.804 0 00-1.807-1.802zM94.468 6.616c-4.09 0-7.059 2.938-7.059 6.987 0 1.968.695 3.749 1.96 5.012 1.271 1.273 3.073 1.973 5.07 1.973 1.654 0 2.944-.328 5.375-2.107l-1.674-1.763c-1.194.791-2.305 1.176-3.395 1.176-2.467 0-4.329-1.844-4.329-4.29 0-2.447 1.862-4.292 4.33-4.292 1.176 0 2.268.385 3.337 1.177l1.872-1.768c-2.173-1.885-4.171-2.105-5.487-2.105zM105 14.388a.257.257 0 01.171-.066h.015c.072.007.138.04.181.094l4.719 5.838 3.63.002-6.106-7.37a.255.255 0 01.015-.34l5.613-5.6h-3.597l-4.831 4.849a.253.253 0 01-.432-.179l.006-10.471h-2.958v19.113h2.952v-5.185a.25.25 0 01.081-.185l.541-.5z"></path><path d="M118.531 20.59c2.421 0 4.869-1.46 4.869-4.251 0-1.819-1.143-3.076-3.493-3.84l-1.606-.526c-1.079-.36-1.606-.874-1.606-1.576 0-.802.721-1.362 1.753-1.362.981 0 1.855.639 2.408 1.753l2.369-1.272c-.866-1.789-2.691-2.9-4.777-2.9-2.644 0-4.566 1.694-4.566 4.03 0 1.844 1.107 3.091 3.38 3.812l1.636.526c1.16.366 1.631.821 1.631 1.576 0 1.128-1.049 1.528-1.944 1.528-1.197 0-2.257-.775-2.777-2.026l-2.39 1.243c.793 2.027 2.746 3.285 5.113 3.285zM38.443 20.454c.932 0 1.776-.083 2.241-.156v-2.544c-.388.05-1.058.095-1.48.095-1.198 0-2.113-.204-2.113-2.778v-5.47c0-.14.113-.253.253-.253h2.875l-.002-2.402-2.873.002a.253.253 0 01-.253-.253V2.836l-2.933.002.003 3.857c0 .14-.113.253-.254.253H31.85l.002 2.402 2.056-.002c.14 0 .254.113.254.253V15.8c-.007 4.655 3.107 4.655 4.28 4.655z"></path></g></svg></span></a><div role="separator" class="css-10doamx"></div><div><span id="persona-switcher-label" class="css-177iafl">Active persona</span><button id="persona-switcher-button" data-testid="PersonaSwitcherButton" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="persona-switcher-label persona-switcher-button" class="css-10wgjv9"><span role="presentation" class="css-hqvexg"><span aria-hidden="true" class="css-kl5ifi">D</span></span><span class="persona-nav-expanded-text css-1yxhh0r"><span data-testid="SelectedPersona" class="css-aogtgp">Data Science &amp; Engineering</span></span><span role="presentation" class="css-12voij3"><svg aria-hidden="true" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.706145 1.71012L3.29615 4.30012C3.68615 4.69012 4.31615 4.69012 4.70615 4.30012L7.29614 1.71012C7.92615 1.08012 7.47614 0.00012207 6.58614 0.00012207H1.40615C0.516145 0.00012207 0.0761452 1.08012 0.706145 1.71012Z" fill="currentColor"></path></svg></span></button></div><div role="separator" class="css-10doamx"></div><div data-testid="PersonaNavMenus" class="css-b3415i"><div class="css-i9gxme"><div><button id="create-menu-button" type="button" data-testid="PersonaNavCreateMenu" aria-controls="create-menu" aria-expanded="false" aria-haspopup="menu" class="css-1sp61a5"><span class="create-button-icon css-oqg568"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 7C11.45 7 11 7.45 11 8V11H8C7.45 11 7 11.45 7 12C7 12.55 7.45 13 8 13H11V16C11 16.55 11.45 17 12 17C12.55 17 13 16.55 13 16V13H16C16.55 13 17 12.55 17 12C17 11.45 16.55 11 16 11H13V8C13 7.45 12.55 7 12 7ZM4 12C4 16.41 7.59 20 12 20C16.41 20 20 16.41 20 12C20 7.59 16.41 4 12 4C7.59 4 4 7.59 4 12Z" fill="currentColor"></path></svg></span><span class="persona-nav-expanded-text">Create</span></button></div><div role="group"><button type="button" aria-current="page" data-testid="Workspace" class="css-jz3ak4"><span class="nav-icon css-1k92y69"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H5V3Z" stroke="currentColor" stroke-width="2"></path><line x1="8" y1="17" x2="2" y2="17" stroke="currentColor" stroke-width="2"></line><line x1="8" y1="12" x2="2" y2="12" stroke="currentColor" stroke-width="2"></line><line x1="8" y1="7" x2="2" y2="7" stroke="currentColor" stroke-width="2"></line><line x1="9" y1="3" x2="9" y2="21" stroke="currentColor" stroke-width="2"></line></svg></span><span class="persona-nav-expanded-text css-8uhtka"><span title="Workspace">Workspace</span></span></button><button type="button" data-testid="Recents" class="css-2dynbj"><span class="nav-icon css-1k92y69"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"></circle><path d="M12 5L12 12L16 16" stroke="currentColor" stroke-width="2"></path></svg></span><span class="persona-nav-expanded-text css-8uhtka"><span title="Recents">Recents</span></span></button><button type="button" data-testid="Search" class="css-2dynbj"><span class="nav-icon css-1k92y69"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"></circle><path d="M22 22L15.5 15.5" stroke="currentColor" stroke-width="2"></path></svg></span><span class="persona-nav-expanded-text css-8uhtka"><span title="Search">Search</span></span></button><div role="separator" class="css-10doamx"></div><button type="button" data-testid="Tables" class="css-2dynbj"><span class="nav-icon css-1k92y69"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="14" width="8" height="8" stroke="currentColor" stroke-width="2"></rect><circle cx="6" cy="18" r="4" stroke="currentColor" stroke-width="2"></circle><path d="M7.63073 10L12 2.07184L16.3693 10H7.63073Z" stroke="currentColor" stroke-width="2"></path></svg></span><span class="persona-nav-expanded-text css-8uhtka"><span title="Data">Data</span></span></button><a href="https://community.cloud.databricks.com/?o=1911856728025970#setting/clusters" data-testid="Compute" class="css-2dynbj"><span class="nav-icon css-1k92y69"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="20" r="2" stroke="currentColor" stroke-width="2"></circle><circle cx="12" cy="20" r="2" stroke="currentColor" stroke-width="2"></circle><circle cx="20" cy="20" r="2" stroke="currentColor" stroke-width="2"></circle><path d="M12 18V9" stroke="currentColor" stroke-width="2"></path><path d="M4 18V15C4 13.8954 4.89543 13 6 13H18C19.1046 13 20 13.8954 20 15V18" stroke="currentColor" stroke-width="2"></path><path d="M3.76389 11C3.28885 10.4692 3 9.76835 3 9C3 7.34315 4.34315 6 6 6H7C7 3.79086 9.01472 2 11.5 2C13.5968 2 15.3587 3.27477 15.8582 5H18C19.6569 5 21 6.61178 21 8.6C21 9.52203 20.7111 10.3631 20.2361 11" stroke="currentColor" stroke-width="2"></path></svg></span><span class="persona-nav-expanded-text css-8uhtka"><span title="Compute">Compute</span></span></a><a href="https://community.cloud.databricks.com/?o=1911856728025970#joblist" data-testid="Jobs" class="css-2dynbj"><span class="nav-icon css-1k92y69"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 5L11 5" stroke="currentColor" stroke-width="2"></path><path d="M22 12L11 12" stroke="currentColor" stroke-width="2"></path><path d="M22 19L2 19" stroke="currentColor" stroke-width="2"></path><path d="M2 11L4.5 13.5L9 9" stroke="currentColor" stroke-width="2"></path><path d="M2 4L4.5 6.5L9 2" stroke="currentColor" stroke-width="2"></path></svg></span><span class="persona-nav-expanded-text css-8uhtka"><span title="Jobs">Jobs</span></span></a><div role="separator" class="css-10doamx"></div></div></div><div role="group"><div><button type="button" aria-controls="persona-nav-help-menu" aria-haspopup="menu" class="css-2dynbj"><span class="nav-icon css-1k92y69"><svg aria-hidden="true" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.48 4.48 0 10 0C15.52 0 20 4.48 20 10C20 15.52 15.52 20 10 20C4.48 20 0 15.52 0 10ZM2 10C2 14.41 5.59 18 10 18C14.41 18 18 14.41 18 10C18 5.59 14.41 2 10 2C5.59 2 2 5.59 2 10ZM11 14V16H9V14H11ZM6.18 6.83C6.73 5.01 8.55 3.74 10.61 4.04C12.35 4.3 13.72 5.77 13.96 7.51C14.1881 9.12354 13.2957 9.90209 12.4344 10.6535C12.2762 10.7916 12.119 10.9288 11.97 11.07C11.85 11.18 11.74 11.29 11.64 11.41C11.635 11.415 11.63 11.4225 11.625 11.43C11.62 11.4375 11.615 11.445 11.61 11.45C11.51 11.57 11.41 11.7 11.33 11.84C11.32 11.855 11.3125 11.87 11.305 11.885C11.2975 11.9 11.29 11.915 11.28 11.93C11.11 12.23 11 12.58 11 13H9C9 12.5 9.08 12.09 9.2 11.75C9.20438 11.7368 9.20685 11.7256 9.20907 11.7155C9.21192 11.7025 9.21438 11.6912 9.22 11.68C9.225 11.665 9.2325 11.6525 9.24 11.64C9.2475 11.6275 9.255 11.615 9.26 11.6C9.33 11.42 9.42 11.25 9.51 11.1C9.515 11.09 9.52 11.0825 9.525 11.075C9.53 11.0675 9.535 11.06 9.54 11.05C9.54 11.045 9.5425 11.0425 9.545 11.04C9.5475 11.0375 9.55 11.035 9.55 11.03C9.89058 10.5171 10.3473 10.1658 10.7745 9.83728C11.3883 9.3652 11.941 8.94014 12 8.15C12.08 7.18 11.38 6.25 10.43 6.05C9.4 5.83 8.45 6.44 8.13 7.33C7.99 7.71 7.66 8 7.25 8H7.05C6.44 8 6 7.41 6.18 6.83Z" fill="currentColor"></path></svg></span><span class="persona-nav-expanded-text css-8uhtka"><span title="Help">Help</span></span></button></div><div><button type="button" data-testid="Settings" aria-controls="settings-menu" aria-haspopup="menu" class="css-2dynbj"><span class="nav-icon css-1k92y69"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10.1053V13.8947L5.45227 14.7122L4.29626 17.0242L6.97582 19.7037L9.28784 18.5477L10.1053 21H13.8947L14.7122 18.5477L17.0242 19.7037L19.7037 17.0242L18.5477 14.7122L21 13.8947L21 10.1053L18.5477 9.28784L19.7037 6.97582L17.0242 4.29626L14.7122 5.45227L13.8947 3H10.1053L9.28784 5.45227L6.97582 4.29626L4.29626 6.97582L5.45227 9.28784L3 10.1053Z" stroke="currentColor" stroke-width="2"></path><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"></circle></svg></span><span class="persona-nav-expanded-text css-8uhtka"><span title="Settings">Settings</span></span></button></div><div><button type="button" aria-controls="account-menu" aria-haspopup="menu" class="css-2dynbj"><span class="nav-icon css-1rn6sz3"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 22V18C5 15.7909 6.79086 14 9 14H15C17.2091 14 19 15.7909 19 18V22" stroke="currentColor" stroke-width="2"></path><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"></circle></svg></span><span class="persona-nav-expanded-text css-8uhtka"><span title="mcgill">mcgill</span><span title="enterpriseinsy695@gmail.com" class="css-phheb1">enterpriseinsy695@gmail.com</span></span></button></div><div role="separator" class="css-10doamx"></div><div><button type="button" data-testid="PersonaMenuOptionsButton" aria-controls="menu-options-menu" aria-haspopup="menu" class="css-2dynbj"><span class="nav-icon css-1k92y69"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 3H19C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 21V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="persona-nav-expanded-text css-8uhtka"><span title="Menu options">Menu options</span></span></button></div></div></div></nav></div><div class="sidebar-alt"><div></div><div></div></div></div></div></uses-legacy-bootstrap></div><div id="legacy-app-root">
+      <div id="overallView" class="dashboard-present-view" style="left: 60px;"><div style="height: 100%;"><div class=""><div class="databricks-notification-wrapper"><div class="notifications-wrapper"></div></div><uses-legacy-bootstrap><div class="dashboard-present-view-btns-wrapper"><div class="exit-present-btn"><a href="https://community.cloud.databricks.com/?o=1911856728025970#notebook/1076761207328622/dashboard/2432988394733026">Exit</a></div><div class="refresh-btn"><a class="btn btn-primary confirm-button">Update</a></div></div></uses-legacy-bootstrap><div class="dashboard-present-view-wrapper" style="width: 1024px;"><div class="dashboard-title">Dashboard</div><div><div class="input-widget-panel-3 webapp-css-4lujry"><ul data-testid="dashboard-input-widget-panel" class="webapp-css-1yqcnnw"></ul></div><div class="dashboard-layout-view" style="min-height: 576px;"><div class="react-grid-layout layout" style="height: 2652px;"><div data-guid="0a15d675-471d-4afd-be6d-d473f6a3b358" class="react-grid-item dashboard-grid-item-content cssTransforms react-resizable-hide react-resizable" style="width: 927px; height: 372px; position: absolute; transform: translate(48px, 90px);"><uses-legacy-bootstrap data-wrapped-element-id="DashboardLayoutView.GridLayout"><div class="dashboard-element-wrapper"><div class="run-btn-title-wrapper no-title"></div><div class="scalar" style="transform: scale(1); transform-origin: left top;"><div><div class="results dashboard"><div class="dashboard"><div style="width: auto; position: relative; margin-top: 0px;"><div><div class="widget" data-guid="3d78cf46-3fd3-4ed1-b67b-54a66c464fb3" style="left: 0px; top: 0px; width: 910px; height: 364px; box-sizing: content-box; --plotWarningHeight:0px;"><div class="widget-content dashboard"><div class="results"><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms allow-same-origin allow-downloads" id="19de1bc9-ae2e-4d9e-8037-a02af9d23def" width="100%" height="0" frameborder="0" style="overflow: hidden; filter: var(--invert-filter); height: 344px;" scrolling="no" seamless="seamless" src="./Game Statistics Dashboard - Databricks Community Edition_files/iframe.html" data-content="
+  
+  
+  &lt;style&gt;
+    
+/**
+ * NB: this stylesheet is loaded inline in sandboxed HTML iframes that may contain
+ * arbitrary untrusted content.  Be very careful what rules you add here.
+ */
+body, .mfe-root {
+  background-color: transparent;
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#content-wrapper {
+  overflow: auto;
+}
+
+#content-wrapper .markdown {
+  /**
+   * without overriding this, the height is 100% (of the containing block), which is
+   * initially quite small. The content will not fit, and will then depend on the
+   * `overflow` property, which is `hidden`. In theory, `overflow: visible` will expand the
+   * height to fit, but it has a bad interaction with postResizeMessage which causes the div
+   * to keep growing in size under _some_ (ES-9273) circumstances. `height: auto` has the same
+   * effect of allowing the browser to size the div but without the bad effects.
+   **/
+  height: auto;
+}
+
+/**
+ * Approximates the JupyterLab Light theme for display of pandas-like DataFrames.
+ *
+ * TODO: JupyterLab parameterizes theme-able properties using CSS variables.  This
+ * implementation hard-codes them.
+ */
+.dataframe {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  table-layout: fixed;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+.dataframe thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+.dataframe tr {
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe th {
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe tbody tr:nth-child(odd) {
+  background: white;
+}
+.dataframe tbody tr:nth-child(even) {
+  background: #f5f5f5;
+}
+.dataframe tbody tr:hover {
+  background-color: rgb(218, 242, 254);
+}
+.dataframe tbody tr th:only-of-type {
+  vertical-align: middle;
+}
+.dataframe tbody td {
+  font-size: 12px;
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+
+/**
+ * CSS Variables to override the data summary (Data Profile) output
+ */
+#facets {
+  --font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+.db-summary-container .db-summary-items {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+  &lt;/style&gt;
+  &lt;base href=&#39;https://community.cloud.databricks.com&#39; target=_blank&gt;
+  &lt;script&gt;
+    (function() {
+      var parentUri = &#39;https://community.cloud.databricks.com&#39;;
+      var originalWidth = null;
+      var originalHeight = null;
+      var scale = 1.0;
+      window.onerror = function(error) {
+        window.parent.postMessage({
+          type: &#39;frameJsError&#39;,
+          loc: window.location.href,
+          frameId: &#39;19de1bc9-ae2e-4d9e-8037-a02af9d23def&#39;,
+          error: error,
+        }, parentUri);
+      };
+      function postResizeMessage() {
+        // There are 3 cases, and we take the first that&#39;s available
+        // 1) happy path: content is inlined. We use getBoundingClientRect to capture the dimension
+        //    of (scaled) visible content, including the margin.
+        //    {height, width} is captured via {bottom, right} to include any margin {top, left}.
+        //    This will handle both when there&#39;s collapsing margin &amp; not. See go/pr/43508
+        // 2) content is loaded dynamically, in which case getBoundingClientRect().height may be 0.
+        //    we use scroll{Width, Height} to capture the dimension regardless of what&#39;s currently
+        //    visible.
+        // 3) source in the iframe attaches to the document body and not the content-wrapper.
+        //    we use document.body.scroll{Width, Height}. See ES-3770
+        var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+        var rect = wrapper.getBoundingClientRect();
+        var newWidth = (scale &amp;&amp; rect.right / scale) || wrapper.scrollWidth || document.body.scrollWidth;
+        var newHeight = (scale &amp;&amp; rect.bottom / scale) || wrapper.scrollHeight || document.body.scrollHeight;
+        if (Math.round(newWidth) != Math.round(originalWidth) || Math.round(newHeight) != Math.round(originalHeight)) {
+          originalWidth = newWidth;
+          originalHeight = newHeight;
+          window.parent.postMessage({
+            type: &#39;frameResizeEvent&#39;,
+            frameId: &#39;19de1bc9-ae2e-4d9e-8037-a02af9d23def&#39;,
+            loc: window.location.href,
+            height: originalHeight,
+            width: originalWidth,
+            isAutoScaled: true,
+          }, parentUri);
+        }
+      };
+      // Sync size 4 times per second
+      setInterval(postResizeMessage, 250);
+
+      window.addEventListener(&#39;message&#39;, function(msg) {
+        var origin = msg.origin || msg.originalEvent.origin;
+        var isExportedHTML = origin === &#39;null&#39; &amp;&amp; parentUri === &#39;*&#39;;
+        if (origin !== parentUri &amp;&amp; !isExportedHTML) {
+          console.error(&#39;Invalid origin&#39;, origin, parentUri);
+          return;
+        }
+
+        
+        if (msg.data.type === &#39;frameSizedEvent&#39;) {
+          var xRatio = msg.data.frameWidth / originalWidth;
+          var yRatio = msg.data.frameHeight / originalHeight;
+          scale = 1.0;
+          if (xRatio &lt; 1 || yRatio &lt; 1) {
+            scale = Math.min(xRatio, yRatio);
+          }
+          document.body.style[&#39;transform&#39;] = &#39;scale(&#39; + scale + &#39;)&#39;;
+          document.body.style[&#39;transformOrigin&#39;] = &#39;top left&#39;;
+          var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+          wrapper.style[&#39;overflow&#39;] = &#39;inherit&#39;;
+        }
+        
+      });
+      
+    })();
+  &lt;/script&gt;
+  &lt;div id=&#39;content-wrapper&#39; class=&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;center&gt; Montreal Canadiens vs. Philadelphia Flyers at 19:00 &lt;br/&gt; &lt;br/&gt;  New Jersey Devils vs. Buffalo Sabres at 19:00 &lt;br/&gt; &lt;br/&gt;  Florida Panthers vs. Detroit Red Wings at 19:00 &lt;br/&gt; &lt;br/&gt;  Pittsburgh Penguins vs. Boston Bruins at 19:00 &lt;br/&gt; &lt;br/&gt;  Carolina Hurricanes vs. Winnipeg Jets at 19:00 &lt;br/&gt; &lt;br/&gt;  New York Islanders vs. New York Rangers at 19:30 &lt;br/&gt; &lt;br/&gt;  Tampa Bay Lightning vs. Toronto Maple Leafs at 20:00 &lt;br/&gt; &lt;br/&gt;  Minnesota Wild vs. Vancouver Canucks at 20:00 &lt;br/&gt; &lt;br/&gt;  Calgary Flames vs. Dallas Stars at 21:00 &lt;br/&gt; &lt;br/&gt;  San Jose Sharks vs. St. Louis Blues at 22:30 &lt;br/&gt; &lt;br/&gt;  Los Angeles Kings vs. Chicago Blackhawks at 22:30 &lt;br/&gt; &lt;br/&gt; &lt;/center&gt;&lt;/body&gt;&lt;/html&gt;
+  &lt;/div&gt;">
+</iframe></div><div></div></div></div></div></div></div></div></div></div></div></uses-legacy-bootstrap><span class="react-resizable-handle react-resizable-handle-se"></span></div><div data-guid="959b5473-bdc1-457c-8851-99cefe3cf10c" class="react-grid-item dashboard-grid-item-content cssTransforms react-resizable-hide react-resizable" style="width: 461px; height: 1674px; position: absolute; transform: translate(515px, 972px);"><uses-legacy-bootstrap data-wrapped-element-id="DashboardLayoutView.GridLayout"><div class="dashboard-element-wrapper"><div class="run-btn-title-wrapper no-title"></div><div class="scalar" style="transform: scale(1); transform-origin: left top;"><div><div class="results dashboard"><div class="dashboard"><div style="width: auto; position: relative; margin-top: 0px;"><div><div class="widget" data-guid="41335f80-7654-436e-a64b-018ac90cdbc9" style="left: 0px; top: 0px; width: 448px; height: 1666px; box-sizing: content-box; --plotWarningHeight:0px;"><div class="widget-content dashboard"><div class="results"><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms allow-same-origin allow-downloads" id="9a09b7d7-065f-4697-95b6-425b9323659a" width="100%" height="0" frameborder="0" style="overflow: hidden; filter: var(--invert-filter); height: 1610.74px;" scrolling="no" seamless="seamless" src="./Game Statistics Dashboard - Databricks Community Edition_files/iframe(1).html" data-content="
+  
+  
+  &lt;style&gt;
+    
+/**
+ * NB: this stylesheet is loaded inline in sandboxed HTML iframes that may contain
+ * arbitrary untrusted content.  Be very careful what rules you add here.
+ */
+body, .mfe-root {
+  background-color: transparent;
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#content-wrapper {
+  overflow: auto;
+}
+
+#content-wrapper .markdown {
+  /**
+   * without overriding this, the height is 100% (of the containing block), which is
+   * initially quite small. The content will not fit, and will then depend on the
+   * `overflow` property, which is `hidden`. In theory, `overflow: visible` will expand the
+   * height to fit, but it has a bad interaction with postResizeMessage which causes the div
+   * to keep growing in size under _some_ (ES-9273) circumstances. `height: auto` has the same
+   * effect of allowing the browser to size the div but without the bad effects.
+   **/
+  height: auto;
+}
+
+/**
+ * Approximates the JupyterLab Light theme for display of pandas-like DataFrames.
+ *
+ * TODO: JupyterLab parameterizes theme-able properties using CSS variables.  This
+ * implementation hard-codes them.
+ */
+.dataframe {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  table-layout: fixed;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+.dataframe thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+.dataframe tr {
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe th {
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe tbody tr:nth-child(odd) {
+  background: white;
+}
+.dataframe tbody tr:nth-child(even) {
+  background: #f5f5f5;
+}
+.dataframe tbody tr:hover {
+  background-color: rgb(218, 242, 254);
+}
+.dataframe tbody tr th:only-of-type {
+  vertical-align: middle;
+}
+.dataframe tbody td {
+  font-size: 12px;
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+
+/**
+ * CSS Variables to override the data summary (Data Profile) output
+ */
+#facets {
+  --font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+.db-summary-container .db-summary-items {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+  &lt;/style&gt;
+  &lt;base href=&#39;https://community.cloud.databricks.com&#39; target=_blank&gt;
+  &lt;script&gt;
+    (function() {
+      var parentUri = &#39;https://community.cloud.databricks.com&#39;;
+      var originalWidth = null;
+      var originalHeight = null;
+      var scale = 1.0;
+      window.onerror = function(error) {
+        window.parent.postMessage({
+          type: &#39;frameJsError&#39;,
+          loc: window.location.href,
+          frameId: &#39;9a09b7d7-065f-4697-95b6-425b9323659a&#39;,
+          error: error,
+        }, parentUri);
+      };
+      function postResizeMessage() {
+        // There are 3 cases, and we take the first that&#39;s available
+        // 1) happy path: content is inlined. We use getBoundingClientRect to capture the dimension
+        //    of (scaled) visible content, including the margin.
+        //    {height, width} is captured via {bottom, right} to include any margin {top, left}.
+        //    This will handle both when there&#39;s collapsing margin &amp; not. See go/pr/43508
+        // 2) content is loaded dynamically, in which case getBoundingClientRect().height may be 0.
+        //    we use scroll{Width, Height} to capture the dimension regardless of what&#39;s currently
+        //    visible.
+        // 3) source in the iframe attaches to the document body and not the content-wrapper.
+        //    we use document.body.scroll{Width, Height}. See ES-3770
+        var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+        var rect = wrapper.getBoundingClientRect();
+        var newWidth = (scale &amp;&amp; rect.right / scale) || wrapper.scrollWidth || document.body.scrollWidth;
+        var newHeight = (scale &amp;&amp; rect.bottom / scale) || wrapper.scrollHeight || document.body.scrollHeight;
+        if (Math.round(newWidth) != Math.round(originalWidth) || Math.round(newHeight) != Math.round(originalHeight)) {
+          originalWidth = newWidth;
+          originalHeight = newHeight;
+          window.parent.postMessage({
+            type: &#39;frameResizeEvent&#39;,
+            frameId: &#39;9a09b7d7-065f-4697-95b6-425b9323659a&#39;,
+            loc: window.location.href,
+            height: originalHeight,
+            width: originalWidth,
+            isAutoScaled: true,
+          }, parentUri);
+        }
+      };
+      // Sync size 4 times per second
+      setInterval(postResizeMessage, 250);
+
+      window.addEventListener(&#39;message&#39;, function(msg) {
+        var origin = msg.origin || msg.originalEvent.origin;
+        var isExportedHTML = origin === &#39;null&#39; &amp;&amp; parentUri === &#39;*&#39;;
+        if (origin !== parentUri &amp;&amp; !isExportedHTML) {
+          console.error(&#39;Invalid origin&#39;, origin, parentUri);
+          return;
+        }
+
+        
+        if (msg.data.type === &#39;frameSizedEvent&#39;) {
+          var xRatio = msg.data.frameWidth / originalWidth;
+          var yRatio = msg.data.frameHeight / originalHeight;
+          scale = 1.0;
+          if (xRatio &lt; 1 || yRatio &lt; 1) {
+            scale = Math.min(xRatio, yRatio);
+          }
+          document.body.style[&#39;transform&#39;] = &#39;scale(&#39; + scale + &#39;)&#39;;
+          document.body.style[&#39;transformOrigin&#39;] = &#39;top left&#39;;
+          var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+          wrapper.style[&#39;overflow&#39;] = &#39;inherit&#39;;
+        }
+        
+      });
+      
+    })();
+  &lt;/script&gt;
+  &lt;div id=&#39;content-wrapper&#39; class=&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;h2&gt; Away Team: Philadelphia Flyers &lt;/h2&gt;Goals: 2 &lt;/br&gt;Shot Saved: 5 &lt;/br&gt;Shots Blocked: 7 &lt;/br&gt;Shots Missed: 2 &lt;/br&gt;Takeaways: 6 &lt;/br&gt;Hits: 11 &lt;/br&gt;Giveaways: 3 &lt;/br&gt;Penalties: 1 &lt;/br&gt;Faceoffs: 7 &lt;/br&gt;&lt;h2&gt; Away Team: Buffalo Sabres &lt;/h2&gt;Goals: 1 &lt;/br&gt;Shot Saved: 11 &lt;/br&gt;Shots Blocked: 6 &lt;/br&gt;Shots Missed: 4 &lt;/br&gt;Takeaways: 1 &lt;/br&gt;Hits: 5 &lt;/br&gt;Giveaways: 5 &lt;/br&gt;Penalties: 1 &lt;/br&gt;Faceoffs: 5 &lt;/br&gt;&lt;h2&gt; Away Team: Detroit Red Wings &lt;/h2&gt;Goals: 0 &lt;/br&gt;Shot Saved: 11 &lt;/br&gt;Shots Blocked: 4 &lt;/br&gt;Shots Missed: 2 &lt;/br&gt;Takeaways: 5 &lt;/br&gt;Hits: 15 &lt;/br&gt;Giveaways: 4 &lt;/br&gt;Penalties: 1 &lt;/br&gt;Faceoffs: 10 &lt;/br&gt;&lt;h2&gt; Away Team: Boston Bruins &lt;/h2&gt;Goals: 2 &lt;/br&gt;Shot Saved: 5 &lt;/br&gt;Shots Blocked: 4 &lt;/br&gt;Shots Missed: 2 &lt;/br&gt;Takeaways: 1 &lt;/br&gt;Hits: 7 &lt;/br&gt;Giveaways: 2 &lt;/br&gt;Penalties: 3 &lt;/br&gt;Faceoffs: 7 &lt;/br&gt;&lt;h2&gt; Away Team: Winnipeg Jets &lt;/h2&gt;Goals: 3 &lt;/br&gt;Shot Saved: 6 &lt;/br&gt;Shots Blocked: 2 &lt;/br&gt;Shots Missed: 2 &lt;/br&gt;Takeaways: 6 &lt;/br&gt;Hits: 13 &lt;/br&gt;Giveaways: 6 &lt;/br&gt;Penalties: 0 &lt;/br&gt;Faceoffs: 5 &lt;/br&gt;&lt;h2&gt; Away Team: New York Rangers &lt;/h2&gt;Goals: 0 &lt;/br&gt;Shot Saved: 14 &lt;/br&gt;Shots Blocked: 9 &lt;/br&gt;Shots Missed: 2 &lt;/br&gt;Takeaways: 1 &lt;/br&gt;Hits: 11 &lt;/br&gt;Giveaways: 1 &lt;/br&gt;Penalties: 1 &lt;/br&gt;Faceoffs: 10 &lt;/br&gt;&lt;h2&gt; Away Team: Toronto Maple Leafs &lt;/h2&gt;Goals: 0 &lt;/br&gt;Shot Saved: 10 &lt;/br&gt;Shots Blocked: 6 &lt;/br&gt;Shots Missed: 8 &lt;/br&gt;Takeaways: 1 &lt;/br&gt;Hits: 11 &lt;/br&gt;Giveaways: 1 &lt;/br&gt;Penalties: 1 &lt;/br&gt;Faceoffs: 10 &lt;/br&gt;&lt;h2&gt; Away Team: Vancouver Canucks &lt;/h2&gt;Goals: 0 &lt;/br&gt;Shot Saved: 11 &lt;/br&gt;Shots Blocked: 7 &lt;/br&gt;Shots Missed: 2 &lt;/br&gt;Takeaways: 0 &lt;/br&gt;Hits: 3 &lt;/br&gt;Giveaways: 4 &lt;/br&gt;Penalties: 2 &lt;/br&gt;Faceoffs: 13 &lt;/br&gt;&lt;/body&gt;&lt;/html&gt;
+  &lt;/div&gt;">
+</iframe></div><div></div></div></div></div></div></div></div></div></div></div></uses-legacy-bootstrap><span class="react-resizable-handle react-resizable-handle-se"></span></div><div data-guid="9ea8d226-fd4f-4569-b787-c282976288c3" class="react-grid-item dashboard-grid-item-content cssTransforms react-resizable-hide react-resizable" style="width: 927px; height: 78px; position: absolute; transform: translate(48px, 888px);"><uses-legacy-bootstrap data-wrapped-element-id="DashboardLayoutView.GridLayout"><div class="dashboard-element-wrapper"><div class="run-btn-title-wrapper no-title"></div><div class="scalar" style="transform: scale(1); transform-origin: left top;"><div><div class="results dashboard"><div class="dashboard"><div style="width: auto; position: relative; margin-top: 0px;"><div><div class="widget" data-guid="cca8432b-ef85-4999-b2f4-22f88ed2be19" style="left: 0px; top: 0px; width: 910px; height: 70px; box-sizing: content-box; --plotWarningHeight:0px;"><div class="widget-content dashboard"><div class="results"><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms allow-same-origin allow-downloads" id="6bcf1f94-c8e2-42ad-b6ae-12d78e187e0d" width="100%" height="0" frameborder="0" style="overflow: hidden; filter: var(--invert-filter); height: 31.6667px;" scrolling="no" seamless="seamless" src="./Game Statistics Dashboard - Databricks Community Edition_files/iframe(2).html" data-content="
+  
+  
+  &lt;style&gt;
+    
+/**
+ * NB: this stylesheet is loaded inline in sandboxed HTML iframes that may contain
+ * arbitrary untrusted content.  Be very careful what rules you add here.
+ */
+body, .mfe-root {
+  background-color: transparent;
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#content-wrapper {
+  overflow: auto;
+}
+
+#content-wrapper .markdown {
+  /**
+   * without overriding this, the height is 100% (of the containing block), which is
+   * initially quite small. The content will not fit, and will then depend on the
+   * `overflow` property, which is `hidden`. In theory, `overflow: visible` will expand the
+   * height to fit, but it has a bad interaction with postResizeMessage which causes the div
+   * to keep growing in size under _some_ (ES-9273) circumstances. `height: auto` has the same
+   * effect of allowing the browser to size the div but without the bad effects.
+   **/
+  height: auto;
+}
+
+/**
+ * Approximates the JupyterLab Light theme for display of pandas-like DataFrames.
+ *
+ * TODO: JupyterLab parameterizes theme-able properties using CSS variables.  This
+ * implementation hard-codes them.
+ */
+.dataframe {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  table-layout: fixed;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+.dataframe thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+.dataframe tr {
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe th {
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe tbody tr:nth-child(odd) {
+  background: white;
+}
+.dataframe tbody tr:nth-child(even) {
+  background: #f5f5f5;
+}
+.dataframe tbody tr:hover {
+  background-color: rgb(218, 242, 254);
+}
+.dataframe tbody tr th:only-of-type {
+  vertical-align: middle;
+}
+.dataframe tbody td {
+  font-size: 12px;
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+
+/**
+ * CSS Variables to override the data summary (Data Profile) output
+ */
+#facets {
+  --font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+.db-summary-container .db-summary-items {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+  &lt;/style&gt;
+  &lt;base href=&#39;https://community.cloud.databricks.com&#39; target=_blank&gt;
+  &lt;script&gt;
+    (function() {
+      var parentUri = &#39;https://community.cloud.databricks.com&#39;;
+      var originalWidth = null;
+      var originalHeight = null;
+      var scale = 1.0;
+      window.onerror = function(error) {
+        window.parent.postMessage({
+          type: &#39;frameJsError&#39;,
+          loc: window.location.href,
+          frameId: &#39;6bcf1f94-c8e2-42ad-b6ae-12d78e187e0d&#39;,
+          error: error,
+        }, parentUri);
+      };
+      function postResizeMessage() {
+        // There are 3 cases, and we take the first that&#39;s available
+        // 1) happy path: content is inlined. We use getBoundingClientRect to capture the dimension
+        //    of (scaled) visible content, including the margin.
+        //    {height, width} is captured via {bottom, right} to include any margin {top, left}.
+        //    This will handle both when there&#39;s collapsing margin &amp; not. See go/pr/43508
+        // 2) content is loaded dynamically, in which case getBoundingClientRect().height may be 0.
+        //    we use scroll{Width, Height} to capture the dimension regardless of what&#39;s currently
+        //    visible.
+        // 3) source in the iframe attaches to the document body and not the content-wrapper.
+        //    we use document.body.scroll{Width, Height}. See ES-3770
+        var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+        var rect = wrapper.getBoundingClientRect();
+        var newWidth = (scale &amp;&amp; rect.right / scale) || wrapper.scrollWidth || document.body.scrollWidth;
+        var newHeight = (scale &amp;&amp; rect.bottom / scale) || wrapper.scrollHeight || document.body.scrollHeight;
+        if (Math.round(newWidth) != Math.round(originalWidth) || Math.round(newHeight) != Math.round(originalHeight)) {
+          originalWidth = newWidth;
+          originalHeight = newHeight;
+          window.parent.postMessage({
+            type: &#39;frameResizeEvent&#39;,
+            frameId: &#39;6bcf1f94-c8e2-42ad-b6ae-12d78e187e0d&#39;,
+            loc: window.location.href,
+            height: originalHeight,
+            width: originalWidth,
+            isAutoScaled: true,
+          }, parentUri);
+        }
+      };
+      // Sync size 4 times per second
+      setInterval(postResizeMessage, 250);
+
+      window.addEventListener(&#39;message&#39;, function(msg) {
+        var origin = msg.origin || msg.originalEvent.origin;
+        var isExportedHTML = origin === &#39;null&#39; &amp;&amp; parentUri === &#39;*&#39;;
+        if (origin !== parentUri &amp;&amp; !isExportedHTML) {
+          console.error(&#39;Invalid origin&#39;, origin, parentUri);
+          return;
+        }
+
+        
+        if (msg.data.type === &#39;frameSizedEvent&#39;) {
+          var xRatio = msg.data.frameWidth / originalWidth;
+          var yRatio = msg.data.frameHeight / originalHeight;
+          scale = 1.0;
+          if (xRatio &lt; 1 || yRatio &lt; 1) {
+            scale = Math.min(xRatio, yRatio);
+          }
+          document.body.style[&#39;transform&#39;] = &#39;scale(&#39; + scale + &#39;)&#39;;
+          document.body.style[&#39;transformOrigin&#39;] = &#39;top left&#39;;
+          var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+          wrapper.style[&#39;overflow&#39;] = &#39;inherit&#39;;
+        }
+        
+      });
+      
+    })();
+  &lt;/script&gt;
+  &lt;div id=&#39;content-wrapper&#39; class=&gt;&lt;center&gt;&lt;h1&gt; First Period Stats: &lt;/h1&gt;&lt;/center&gt;
+  &lt;/div&gt;">
+</iframe></div><div></div></div></div></div></div></div></div></div></div></div></uses-legacy-bootstrap><span class="react-resizable-handle react-resizable-handle-se"></span></div><div data-guid="a3e13b39-233a-4fe4-89e5-2749b7139955" class="react-grid-item dashboard-grid-item-content cssTransforms react-resizable-hide react-resizable" style="width: 927px; height: 78px; position: absolute; transform: translate(48px, 468px);"><uses-legacy-bootstrap data-wrapped-element-id="DashboardLayoutView.GridLayout"><div class="dashboard-element-wrapper"><div class="run-btn-title-wrapper no-title"></div><div class="scalar" style="transform: scale(1); transform-origin: left top;"><div><div class="results dashboard"><div class="dashboard"><div style="width: auto; position: relative; margin-top: 0px;"><div><div class="widget" data-guid="7c40bb3f-f529-45f7-8bce-2fa65383ef88" style="left: 0px; top: 0px; width: 910px; height: 70px; box-sizing: content-box; --plotWarningHeight:0px;"><div class="widget-content dashboard"><div class="results"><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms allow-same-origin allow-downloads" id="5ff0027e-0342-495e-986c-b52ca535c132" width="100%" height="0" frameborder="0" style="overflow: hidden; filter: var(--invert-filter); height: 31.6667px;" scrolling="no" seamless="seamless" src="./Game Statistics Dashboard - Databricks Community Edition_files/iframe(3).html" data-content="
+  
+  
+  &lt;style&gt;
+    
+/**
+ * NB: this stylesheet is loaded inline in sandboxed HTML iframes that may contain
+ * arbitrary untrusted content.  Be very careful what rules you add here.
+ */
+body, .mfe-root {
+  background-color: transparent;
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#content-wrapper {
+  overflow: auto;
+}
+
+#content-wrapper .markdown {
+  /**
+   * without overriding this, the height is 100% (of the containing block), which is
+   * initially quite small. The content will not fit, and will then depend on the
+   * `overflow` property, which is `hidden`. In theory, `overflow: visible` will expand the
+   * height to fit, but it has a bad interaction with postResizeMessage which causes the div
+   * to keep growing in size under _some_ (ES-9273) circumstances. `height: auto` has the same
+   * effect of allowing the browser to size the div but without the bad effects.
+   **/
+  height: auto;
+}
+
+/**
+ * Approximates the JupyterLab Light theme for display of pandas-like DataFrames.
+ *
+ * TODO: JupyterLab parameterizes theme-able properties using CSS variables.  This
+ * implementation hard-codes them.
+ */
+.dataframe {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  table-layout: fixed;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+.dataframe thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+.dataframe tr {
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe th {
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe tbody tr:nth-child(odd) {
+  background: white;
+}
+.dataframe tbody tr:nth-child(even) {
+  background: #f5f5f5;
+}
+.dataframe tbody tr:hover {
+  background-color: rgb(218, 242, 254);
+}
+.dataframe tbody tr th:only-of-type {
+  vertical-align: middle;
+}
+.dataframe tbody td {
+  font-size: 12px;
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+
+/**
+ * CSS Variables to override the data summary (Data Profile) output
+ */
+#facets {
+  --font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+.db-summary-container .db-summary-items {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+  &lt;/style&gt;
+  &lt;base href=&#39;https://community.cloud.databricks.com&#39; target=_blank&gt;
+  &lt;script&gt;
+    (function() {
+      var parentUri = &#39;https://community.cloud.databricks.com&#39;;
+      var originalWidth = null;
+      var originalHeight = null;
+      var scale = 1.0;
+      window.onerror = function(error) {
+        window.parent.postMessage({
+          type: &#39;frameJsError&#39;,
+          loc: window.location.href,
+          frameId: &#39;5ff0027e-0342-495e-986c-b52ca535c132&#39;,
+          error: error,
+        }, parentUri);
+      };
+      function postResizeMessage() {
+        // There are 3 cases, and we take the first that&#39;s available
+        // 1) happy path: content is inlined. We use getBoundingClientRect to capture the dimension
+        //    of (scaled) visible content, including the margin.
+        //    {height, width} is captured via {bottom, right} to include any margin {top, left}.
+        //    This will handle both when there&#39;s collapsing margin &amp; not. See go/pr/43508
+        // 2) content is loaded dynamically, in which case getBoundingClientRect().height may be 0.
+        //    we use scroll{Width, Height} to capture the dimension regardless of what&#39;s currently
+        //    visible.
+        // 3) source in the iframe attaches to the document body and not the content-wrapper.
+        //    we use document.body.scroll{Width, Height}. See ES-3770
+        var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+        var rect = wrapper.getBoundingClientRect();
+        var newWidth = (scale &amp;&amp; rect.right / scale) || wrapper.scrollWidth || document.body.scrollWidth;
+        var newHeight = (scale &amp;&amp; rect.bottom / scale) || wrapper.scrollHeight || document.body.scrollHeight;
+        if (Math.round(newWidth) != Math.round(originalWidth) || Math.round(newHeight) != Math.round(originalHeight)) {
+          originalWidth = newWidth;
+          originalHeight = newHeight;
+          window.parent.postMessage({
+            type: &#39;frameResizeEvent&#39;,
+            frameId: &#39;5ff0027e-0342-495e-986c-b52ca535c132&#39;,
+            loc: window.location.href,
+            height: originalHeight,
+            width: originalWidth,
+            isAutoScaled: true,
+          }, parentUri);
+        }
+      };
+      // Sync size 4 times per second
+      setInterval(postResizeMessage, 250);
+
+      window.addEventListener(&#39;message&#39;, function(msg) {
+        var origin = msg.origin || msg.originalEvent.origin;
+        var isExportedHTML = origin === &#39;null&#39; &amp;&amp; parentUri === &#39;*&#39;;
+        if (origin !== parentUri &amp;&amp; !isExportedHTML) {
+          console.error(&#39;Invalid origin&#39;, origin, parentUri);
+          return;
+        }
+
+        
+        if (msg.data.type === &#39;frameSizedEvent&#39;) {
+          var xRatio = msg.data.frameWidth / originalWidth;
+          var yRatio = msg.data.frameHeight / originalHeight;
+          scale = 1.0;
+          if (xRatio &lt; 1 || yRatio &lt; 1) {
+            scale = Math.min(xRatio, yRatio);
+          }
+          document.body.style[&#39;transform&#39;] = &#39;scale(&#39; + scale + &#39;)&#39;;
+          document.body.style[&#39;transformOrigin&#39;] = &#39;top left&#39;;
+          var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+          wrapper.style[&#39;overflow&#39;] = &#39;inherit&#39;;
+        }
+        
+      });
+      
+    })();
+  &lt;/script&gt;
+  &lt;div id=&#39;content-wrapper&#39; class=&gt;&lt;center&gt;&lt;h1 style=&quot;color:red&quot;&gt; Predictions for the Games in Progress &lt;/h1&gt;&lt;/center&gt;
+  &lt;/div&gt;">
+</iframe></div><div></div></div></div></div></div></div></div></div></div></div></uses-legacy-bootstrap><span class="react-resizable-handle react-resizable-handle-se"></span></div><div data-guid="a6b5640c-2280-4709-b395-4b23f149fbb4" class="react-grid-item dashboard-grid-item-content cssTransforms react-resizable-hide react-resizable" style="width: 461px; height: 1674px; position: absolute; transform: translate(48px, 972px);"><uses-legacy-bootstrap data-wrapped-element-id="DashboardLayoutView.GridLayout"><div class="dashboard-element-wrapper"><div class="run-btn-title-wrapper no-title"></div><div class="scalar" style="transform: scale(1); transform-origin: left top;"><div><div class="results dashboard"><div class="dashboard"><div style="width: auto; position: relative; margin-top: 0px;"><div><div class="widget" data-guid="1a602dcf-3dce-4ca9-9814-a47ec840323d" style="left: 0px; top: 0px; width: 448px; height: 1666px; box-sizing: content-box; --plotWarningHeight:0px;"><div class="widget-content dashboard"><div class="results"><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms allow-same-origin allow-downloads" id="cba445f0-435b-4fe9-9ebc-48216fbfc26c" width="100%" height="0" frameborder="0" style="overflow: hidden; filter: var(--invert-filter); height: 1610.74px;" scrolling="no" seamless="seamless" src="./Game Statistics Dashboard - Databricks Community Edition_files/iframe(4).html" data-content="
+  
+  
+  &lt;style&gt;
+    
+/**
+ * NB: this stylesheet is loaded inline in sandboxed HTML iframes that may contain
+ * arbitrary untrusted content.  Be very careful what rules you add here.
+ */
+body, .mfe-root {
+  background-color: transparent;
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#content-wrapper {
+  overflow: auto;
+}
+
+#content-wrapper .markdown {
+  /**
+   * without overriding this, the height is 100% (of the containing block), which is
+   * initially quite small. The content will not fit, and will then depend on the
+   * `overflow` property, which is `hidden`. In theory, `overflow: visible` will expand the
+   * height to fit, but it has a bad interaction with postResizeMessage which causes the div
+   * to keep growing in size under _some_ (ES-9273) circumstances. `height: auto` has the same
+   * effect of allowing the browser to size the div but without the bad effects.
+   **/
+  height: auto;
+}
+
+/**
+ * Approximates the JupyterLab Light theme for display of pandas-like DataFrames.
+ *
+ * TODO: JupyterLab parameterizes theme-able properties using CSS variables.  This
+ * implementation hard-codes them.
+ */
+.dataframe {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  table-layout: fixed;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+.dataframe thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+.dataframe tr {
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe th {
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe tbody tr:nth-child(odd) {
+  background: white;
+}
+.dataframe tbody tr:nth-child(even) {
+  background: #f5f5f5;
+}
+.dataframe tbody tr:hover {
+  background-color: rgb(218, 242, 254);
+}
+.dataframe tbody tr th:only-of-type {
+  vertical-align: middle;
+}
+.dataframe tbody td {
+  font-size: 12px;
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+
+/**
+ * CSS Variables to override the data summary (Data Profile) output
+ */
+#facets {
+  --font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+.db-summary-container .db-summary-items {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+  &lt;/style&gt;
+  &lt;base href=&#39;https://community.cloud.databricks.com&#39; target=_blank&gt;
+  &lt;script&gt;
+    (function() {
+      var parentUri = &#39;https://community.cloud.databricks.com&#39;;
+      var originalWidth = null;
+      var originalHeight = null;
+      var scale = 1.0;
+      window.onerror = function(error) {
+        window.parent.postMessage({
+          type: &#39;frameJsError&#39;,
+          loc: window.location.href,
+          frameId: &#39;cba445f0-435b-4fe9-9ebc-48216fbfc26c&#39;,
+          error: error,
+        }, parentUri);
+      };
+      function postResizeMessage() {
+        // There are 3 cases, and we take the first that&#39;s available
+        // 1) happy path: content is inlined. We use getBoundingClientRect to capture the dimension
+        //    of (scaled) visible content, including the margin.
+        //    {height, width} is captured via {bottom, right} to include any margin {top, left}.
+        //    This will handle both when there&#39;s collapsing margin &amp; not. See go/pr/43508
+        // 2) content is loaded dynamically, in which case getBoundingClientRect().height may be 0.
+        //    we use scroll{Width, Height} to capture the dimension regardless of what&#39;s currently
+        //    visible.
+        // 3) source in the iframe attaches to the document body and not the content-wrapper.
+        //    we use document.body.scroll{Width, Height}. See ES-3770
+        var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+        var rect = wrapper.getBoundingClientRect();
+        var newWidth = (scale &amp;&amp; rect.right / scale) || wrapper.scrollWidth || document.body.scrollWidth;
+        var newHeight = (scale &amp;&amp; rect.bottom / scale) || wrapper.scrollHeight || document.body.scrollHeight;
+        if (Math.round(newWidth) != Math.round(originalWidth) || Math.round(newHeight) != Math.round(originalHeight)) {
+          originalWidth = newWidth;
+          originalHeight = newHeight;
+          window.parent.postMessage({
+            type: &#39;frameResizeEvent&#39;,
+            frameId: &#39;cba445f0-435b-4fe9-9ebc-48216fbfc26c&#39;,
+            loc: window.location.href,
+            height: originalHeight,
+            width: originalWidth,
+            isAutoScaled: true,
+          }, parentUri);
+        }
+      };
+      // Sync size 4 times per second
+      setInterval(postResizeMessage, 250);
+
+      window.addEventListener(&#39;message&#39;, function(msg) {
+        var origin = msg.origin || msg.originalEvent.origin;
+        var isExportedHTML = origin === &#39;null&#39; &amp;&amp; parentUri === &#39;*&#39;;
+        if (origin !== parentUri &amp;&amp; !isExportedHTML) {
+          console.error(&#39;Invalid origin&#39;, origin, parentUri);
+          return;
+        }
+
+        
+        if (msg.data.type === &#39;frameSizedEvent&#39;) {
+          var xRatio = msg.data.frameWidth / originalWidth;
+          var yRatio = msg.data.frameHeight / originalHeight;
+          scale = 1.0;
+          if (xRatio &lt; 1 || yRatio &lt; 1) {
+            scale = Math.min(xRatio, yRatio);
+          }
+          document.body.style[&#39;transform&#39;] = &#39;scale(&#39; + scale + &#39;)&#39;;
+          document.body.style[&#39;transformOrigin&#39;] = &#39;top left&#39;;
+          var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+          wrapper.style[&#39;overflow&#39;] = &#39;inherit&#39;;
+        }
+        
+      });
+      
+    })();
+  &lt;/script&gt;
+  &lt;div id=&#39;content-wrapper&#39; class=&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;h2&gt; Home Team: Montreal Canadiens &lt;/h2&gt;Goals: 1 &lt;/br&gt;Shot Saved: 8 &lt;/br&gt;Shots Blocked: 10 &lt;/br&gt;Shots Missed: 4 &lt;/br&gt;Takeaways: 1 &lt;/br&gt;Hits: 4 &lt;/br&gt;Giveaways: 7 &lt;/br&gt;Penalties: 1 &lt;/br&gt;Faceoffs: 10 &lt;/br&gt;&lt;h2&gt; Home Team: New Jersey Devils &lt;/h2&gt;Goals: 3 &lt;/br&gt;Shot Saved: 4 &lt;/br&gt;Shots Blocked: 3 &lt;/br&gt;Shots Missed: 2 &lt;/br&gt;Takeaways: 4 &lt;/br&gt;Hits: 8 &lt;/br&gt;Giveaways: 3 &lt;/br&gt;Penalties: 1 &lt;/br&gt;Faceoffs: 9 &lt;/br&gt;&lt;h2&gt; Home Team: Florida Panthers &lt;/h2&gt;Goals: 1 &lt;/br&gt;Shot Saved: 12 &lt;/br&gt;Shots Blocked: 4 &lt;/br&gt;Shots Missed: 3 &lt;/br&gt;Takeaways: 5 &lt;/br&gt;Hits: 7 &lt;/br&gt;Giveaways: 1 &lt;/br&gt;Penalties: 0 &lt;/br&gt;Faceoffs: 7 &lt;/br&gt;&lt;h2&gt; Home Team: Pittsburgh Penguins &lt;/h2&gt;Goals: 0 &lt;/br&gt;Shot Saved: 15 &lt;/br&gt;Shots Blocked: 3 &lt;/br&gt;Shots Missed: 11 &lt;/br&gt;Takeaways: 4 &lt;/br&gt;Hits: 2 &lt;/br&gt;Giveaways: 2 &lt;/br&gt;Penalties: 2 &lt;/br&gt;Faceoffs: 12 &lt;/br&gt;&lt;h2&gt; Home Team: Carolina Hurricanes &lt;/h2&gt;Goals: 0 &lt;/br&gt;Shot Saved: 8 &lt;/br&gt;Shots Blocked: 1 &lt;/br&gt;Shots Missed: 3 &lt;/br&gt;Takeaways: 5 &lt;/br&gt;Hits: 8 &lt;/br&gt;Giveaways: 3 &lt;/br&gt;Penalties: 0 &lt;/br&gt;Faceoffs: 7 &lt;/br&gt;&lt;h2&gt; Home Team: New York Islanders &lt;/h2&gt;Goals: 0 &lt;/br&gt;Shot Saved: 7 &lt;/br&gt;Shots Blocked: 8 &lt;/br&gt;Shots Missed: 5 &lt;/br&gt;Takeaways: 2 &lt;/br&gt;Hits: 18 &lt;/br&gt;Giveaways: 1 &lt;/br&gt;Penalties: 2 &lt;/br&gt;Faceoffs: 7 &lt;/br&gt;&lt;h2&gt; Home Team: Tampa Bay Lightning &lt;/h2&gt;Goals: 0 &lt;/br&gt;Shot Saved: 8 &lt;/br&gt;Shots Blocked: 3 &lt;/br&gt;Shots Missed: 4 &lt;/br&gt;Takeaways: 1 &lt;/br&gt;Hits: 8 &lt;/br&gt;Giveaways: 3 &lt;/br&gt;Penalties: 1 &lt;/br&gt;Faceoffs: 5 &lt;/br&gt;&lt;h2&gt; Home Team: Minnesota Wild &lt;/h2&gt;Goals: 0 &lt;/br&gt;Shot Saved: 11 &lt;/br&gt;Shots Blocked: 3 &lt;/br&gt;Shots Missed: 3 &lt;/br&gt;Takeaways: 3 &lt;/br&gt;Hits: 8 &lt;/br&gt;Giveaways: 4 &lt;/br&gt;Penalties: 3 &lt;/br&gt;Faceoffs: 7 &lt;/br&gt;&lt;/body&gt;&lt;/html&gt;
+  &lt;/div&gt;">
+</iframe></div><div></div></div></div></div></div></div></div></div></div></div></uses-legacy-bootstrap><span class="react-resizable-handle react-resizable-handle-se"></span></div><div data-guid="b79e45f4-0a41-4227-bc9e-a0029dcac311" class="react-grid-item dashboard-grid-item-content cssTransforms react-resizable-hide react-resizable" style="width: 927px; height: 330px; position: absolute; transform: translate(48px, 552px);"><uses-legacy-bootstrap data-wrapped-element-id="DashboardLayoutView.GridLayout"><div class="dashboard-element-wrapper"><div class="run-btn-title-wrapper no-title"></div><div class="scalar" style="transform: scale(1); transform-origin: left top;"><div><div class="results dashboard"><div class="dashboard"><div style="width: auto; position: relative; margin-top: 0px;"><div><div class="widget" data-guid="58c85cf0-cdeb-4401-8e7e-d492e9979cba" style="left: 0px; top: 0px; width: 910px; height: 322px; box-sizing: content-box; --plotWarningHeight:0px;"><div class="widget-content dashboard"><div class="results"><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms allow-same-origin allow-downloads" id="d032a83d-fd7b-453f-aa57-f014e2ca87ba" width="100%" height="0" frameborder="0" style="overflow: hidden; filter: var(--invert-filter); height: 256px;" scrolling="no" seamless="seamless" src="./Game Statistics Dashboard - Databricks Community Edition_files/iframe(5).html" data-content="
+  
+  
+  &lt;style&gt;
+    
+/**
+ * NB: this stylesheet is loaded inline in sandboxed HTML iframes that may contain
+ * arbitrary untrusted content.  Be very careful what rules you add here.
+ */
+body, .mfe-root {
+  background-color: transparent;
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#content-wrapper {
+  overflow: auto;
+}
+
+#content-wrapper .markdown {
+  /**
+   * without overriding this, the height is 100% (of the containing block), which is
+   * initially quite small. The content will not fit, and will then depend on the
+   * `overflow` property, which is `hidden`. In theory, `overflow: visible` will expand the
+   * height to fit, but it has a bad interaction with postResizeMessage which causes the div
+   * to keep growing in size under _some_ (ES-9273) circumstances. `height: auto` has the same
+   * effect of allowing the browser to size the div but without the bad effects.
+   **/
+  height: auto;
+}
+
+/**
+ * Approximates the JupyterLab Light theme for display of pandas-like DataFrames.
+ *
+ * TODO: JupyterLab parameterizes theme-able properties using CSS variables.  This
+ * implementation hard-codes them.
+ */
+.dataframe {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  table-layout: fixed;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+.dataframe thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+.dataframe tr {
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe th {
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe tbody tr:nth-child(odd) {
+  background: white;
+}
+.dataframe tbody tr:nth-child(even) {
+  background: #f5f5f5;
+}
+.dataframe tbody tr:hover {
+  background-color: rgb(218, 242, 254);
+}
+.dataframe tbody tr th:only-of-type {
+  vertical-align: middle;
+}
+.dataframe tbody td {
+  font-size: 12px;
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+
+/**
+ * CSS Variables to override the data summary (Data Profile) output
+ */
+#facets {
+  --font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+.db-summary-container .db-summary-items {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+  &lt;/style&gt;
+  &lt;base href=&#39;https://community.cloud.databricks.com&#39; target=_blank&gt;
+  &lt;script&gt;
+    (function() {
+      var parentUri = &#39;https://community.cloud.databricks.com&#39;;
+      var originalWidth = null;
+      var originalHeight = null;
+      var scale = 1.0;
+      window.onerror = function(error) {
+        window.parent.postMessage({
+          type: &#39;frameJsError&#39;,
+          loc: window.location.href,
+          frameId: &#39;d032a83d-fd7b-453f-aa57-f014e2ca87ba&#39;,
+          error: error,
+        }, parentUri);
+      };
+      function postResizeMessage() {
+        // There are 3 cases, and we take the first that&#39;s available
+        // 1) happy path: content is inlined. We use getBoundingClientRect to capture the dimension
+        //    of (scaled) visible content, including the margin.
+        //    {height, width} is captured via {bottom, right} to include any margin {top, left}.
+        //    This will handle both when there&#39;s collapsing margin &amp; not. See go/pr/43508
+        // 2) content is loaded dynamically, in which case getBoundingClientRect().height may be 0.
+        //    we use scroll{Width, Height} to capture the dimension regardless of what&#39;s currently
+        //    visible.
+        // 3) source in the iframe attaches to the document body and not the content-wrapper.
+        //    we use document.body.scroll{Width, Height}. See ES-3770
+        var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+        var rect = wrapper.getBoundingClientRect();
+        var newWidth = (scale &amp;&amp; rect.right / scale) || wrapper.scrollWidth || document.body.scrollWidth;
+        var newHeight = (scale &amp;&amp; rect.bottom / scale) || wrapper.scrollHeight || document.body.scrollHeight;
+        if (Math.round(newWidth) != Math.round(originalWidth) || Math.round(newHeight) != Math.round(originalHeight)) {
+          originalWidth = newWidth;
+          originalHeight = newHeight;
+          window.parent.postMessage({
+            type: &#39;frameResizeEvent&#39;,
+            frameId: &#39;d032a83d-fd7b-453f-aa57-f014e2ca87ba&#39;,
+            loc: window.location.href,
+            height: originalHeight,
+            width: originalWidth,
+            isAutoScaled: true,
+          }, parentUri);
+        }
+      };
+      // Sync size 4 times per second
+      setInterval(postResizeMessage, 250);
+
+      window.addEventListener(&#39;message&#39;, function(msg) {
+        var origin = msg.origin || msg.originalEvent.origin;
+        var isExportedHTML = origin === &#39;null&#39; &amp;&amp; parentUri === &#39;*&#39;;
+        if (origin !== parentUri &amp;&amp; !isExportedHTML) {
+          console.error(&#39;Invalid origin&#39;, origin, parentUri);
+          return;
+        }
+
+        
+        if (msg.data.type === &#39;frameSizedEvent&#39;) {
+          var xRatio = msg.data.frameWidth / originalWidth;
+          var yRatio = msg.data.frameHeight / originalHeight;
+          scale = 1.0;
+          if (xRatio &lt; 1 || yRatio &lt; 1) {
+            scale = Math.min(xRatio, yRatio);
+          }
+          document.body.style[&#39;transform&#39;] = &#39;scale(&#39; + scale + &#39;)&#39;;
+          document.body.style[&#39;transformOrigin&#39;] = &#39;top left&#39;;
+          var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+          wrapper.style[&#39;overflow&#39;] = &#39;inherit&#39;;
+        }
+        
+      });
+      
+    })();
+  &lt;/script&gt;
+  &lt;div id=&#39;content-wrapper&#39; class=&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;h4 style=&quot;color:red&quot;&gt;&lt;center&gt;Philadelphia Flyers will win the game. &lt;br&gt;&lt;br&gt;Detroit Red Wings will win the game. &lt;br&gt;&lt;br&gt;Boston Bruins will win the game. &lt;br&gt;&lt;br&gt;Winnipeg Jets will win the game. &lt;br&gt;&lt;br&gt;New York Rangers will win the game. &lt;br&gt;&lt;br&gt;Toronto Maple Leafs will win the game. &lt;br&gt;&lt;br&gt;Vancouver Canucks will win the game. &lt;br&gt;&lt;br&gt;Dallas Stars will win the game. &lt;br&gt;&lt;br&gt;&lt;/center&gt;&lt;/h4&gt;&lt;/body&gt;&lt;/html&gt;
+  &lt;/div&gt;">
+</iframe></div><div></div></div></div></div></div></div></div></div></div></div></uses-legacy-bootstrap><span class="react-resizable-handle react-resizable-handle-se"></span></div><div data-guid="b8e6dd39-993e-4500-8908-a2da03a39a8d" class="react-grid-item dashboard-grid-item-content cssTransforms react-resizable-hide react-resizable" style="width: 927px; height: 78px; position: absolute; transform: translate(48px, 6px);"><uses-legacy-bootstrap data-wrapped-element-id="DashboardLayoutView.GridLayout"><div class="dashboard-element-wrapper"><div class="run-btn-title-wrapper no-title"></div><div class="scalar" style="transform: scale(1); transform-origin: left top;"><div><div class="results dashboard"><div class="dashboard"><div style="width: auto; position: relative; margin-top: 0px;"><div><div class="widget" data-guid="821ec060-7048-4820-92dc-facb7bd87c65" style="left: 0px; top: 0px; width: 910px; height: 70px; box-sizing: content-box; --plotWarningHeight:0px;"><div class="widget-content dashboard"><div class="results"><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms allow-same-origin allow-downloads" id="b8a3b0b1-b583-44d3-8e0a-324ceb7feae7" width="100%" height="0" frameborder="0" style="overflow: hidden; filter: var(--invert-filter); height: 31.6667px;" scrolling="no" seamless="seamless" src="./Game Statistics Dashboard - Databricks Community Edition_files/iframe(6).html" data-content="
+  
+  
+  &lt;style&gt;
+    
+/**
+ * NB: this stylesheet is loaded inline in sandboxed HTML iframes that may contain
+ * arbitrary untrusted content.  Be very careful what rules you add here.
+ */
+body, .mfe-root {
+  background-color: transparent;
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#content-wrapper {
+  overflow: auto;
+}
+
+#content-wrapper .markdown {
+  /**
+   * without overriding this, the height is 100% (of the containing block), which is
+   * initially quite small. The content will not fit, and will then depend on the
+   * `overflow` property, which is `hidden`. In theory, `overflow: visible` will expand the
+   * height to fit, but it has a bad interaction with postResizeMessage which causes the div
+   * to keep growing in size under _some_ (ES-9273) circumstances. `height: auto` has the same
+   * effect of allowing the browser to size the div but without the bad effects.
+   **/
+  height: auto;
+}
+
+/**
+ * Approximates the JupyterLab Light theme for display of pandas-like DataFrames.
+ *
+ * TODO: JupyterLab parameterizes theme-able properties using CSS variables.  This
+ * implementation hard-codes them.
+ */
+.dataframe {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  table-layout: fixed;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+.dataframe thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+.dataframe tr {
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe th {
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe tbody tr:nth-child(odd) {
+  background: white;
+}
+.dataframe tbody tr:nth-child(even) {
+  background: #f5f5f5;
+}
+.dataframe tbody tr:hover {
+  background-color: rgb(218, 242, 254);
+}
+.dataframe tbody tr th:only-of-type {
+  vertical-align: middle;
+}
+.dataframe tbody td {
+  font-size: 12px;
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+
+/**
+ * CSS Variables to override the data summary (Data Profile) output
+ */
+#facets {
+  --font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+.db-summary-container .db-summary-items {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, &#39;Noto Sans&#39;, sans-serif,&#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;, &#39;Noto Color Emoji&#39;, &#39;FontAwesome&#39;;
+}
+
+  &lt;/style&gt;
+  &lt;base href=&#39;https://community.cloud.databricks.com&#39; target=_blank&gt;
+  &lt;script&gt;
+    (function() {
+      var parentUri = &#39;https://community.cloud.databricks.com&#39;;
+      var originalWidth = null;
+      var originalHeight = null;
+      var scale = 1.0;
+      window.onerror = function(error) {
+        window.parent.postMessage({
+          type: &#39;frameJsError&#39;,
+          loc: window.location.href,
+          frameId: &#39;b8a3b0b1-b583-44d3-8e0a-324ceb7feae7&#39;,
+          error: error,
+        }, parentUri);
+      };
+      function postResizeMessage() {
+        // There are 3 cases, and we take the first that&#39;s available
+        // 1) happy path: content is inlined. We use getBoundingClientRect to capture the dimension
+        //    of (scaled) visible content, including the margin.
+        //    {height, width} is captured via {bottom, right} to include any margin {top, left}.
+        //    This will handle both when there&#39;s collapsing margin &amp; not. See go/pr/43508
+        // 2) content is loaded dynamically, in which case getBoundingClientRect().height may be 0.
+        //    we use scroll{Width, Height} to capture the dimension regardless of what&#39;s currently
+        //    visible.
+        // 3) source in the iframe attaches to the document body and not the content-wrapper.
+        //    we use document.body.scroll{Width, Height}. See ES-3770
+        var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+        var rect = wrapper.getBoundingClientRect();
+        var newWidth = (scale &amp;&amp; rect.right / scale) || wrapper.scrollWidth || document.body.scrollWidth;
+        var newHeight = (scale &amp;&amp; rect.bottom / scale) || wrapper.scrollHeight || document.body.scrollHeight;
+        if (Math.round(newWidth) != Math.round(originalWidth) || Math.round(newHeight) != Math.round(originalHeight)) {
+          originalWidth = newWidth;
+          originalHeight = newHeight;
+          window.parent.postMessage({
+            type: &#39;frameResizeEvent&#39;,
+            frameId: &#39;b8a3b0b1-b583-44d3-8e0a-324ceb7feae7&#39;,
+            loc: window.location.href,
+            height: originalHeight,
+            width: originalWidth,
+            isAutoScaled: true,
+          }, parentUri);
+        }
+      };
+      // Sync size 4 times per second
+      setInterval(postResizeMessage, 250);
+
+      window.addEventListener(&#39;message&#39;, function(msg) {
+        var origin = msg.origin || msg.originalEvent.origin;
+        var isExportedHTML = origin === &#39;null&#39; &amp;&amp; parentUri === &#39;*&#39;;
+        if (origin !== parentUri &amp;&amp; !isExportedHTML) {
+          console.error(&#39;Invalid origin&#39;, origin, parentUri);
+          return;
+        }
+
+        
+        if (msg.data.type === &#39;frameSizedEvent&#39;) {
+          var xRatio = msg.data.frameWidth / originalWidth;
+          var yRatio = msg.data.frameHeight / originalHeight;
+          scale = 1.0;
+          if (xRatio &lt; 1 || yRatio &lt; 1) {
+            scale = Math.min(xRatio, yRatio);
+          }
+          document.body.style[&#39;transform&#39;] = &#39;scale(&#39; + scale + &#39;)&#39;;
+          document.body.style[&#39;transformOrigin&#39;] = &#39;top left&#39;;
+          var wrapper = document.getElementById(&#39;content-wrapper&#39;);
+          wrapper.style[&#39;overflow&#39;] = &#39;inherit&#39;;
+        }
+        
+      });
+      
+    })();
+  &lt;/script&gt;
+  &lt;div id=&#39;content-wrapper&#39; class=&gt;
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;&lt;body&gt;
+    &lt;center&gt;&lt;h1&gt; Games Scheduled Tonight &lt;/h1&gt;&lt;/center&gt;
+
+  &lt;/div&gt;">
+</iframe></div><div></div></div></div></div></div></div></div></div></div></div></uses-legacy-bootstrap><span class="react-resizable-handle react-resizable-handle-se"></span></div></div></div></div></div></div></div></div>
+    </div><uses-legacy-bootstrap data-wrapped-element-id="filebrowser-popup"><div id="filebrowser-popup" style="display: none; width: 266px;"><a class="ft-pin-button" href="https://community.cloud.databricks.com/?o=1911856728025970#" title="Pin side panels"></a><div class="filebrowser-header">
+        <span class="file-browser-header-text" title="Workspace">
+          Workspace
+        </span>
+        <a class="btn btn-secondary file-browser-header-button js-home-button"><i class="fa fa-home fa-fw"></i> Home</a>
+      </div><div class="filebrowser filetree" style="display: none" data-state="invisible" data-history-size="30"><div class="inner"><nav class="ft-panel ui-droppable ui-resizable" aria-label="Workspace" data-panel="Workspace" style="width: 266px;"><ul class="ft-panel-list"><li class="filetree-list-item top-link has-menu"><a href="https://community.cloud.databricks.com/?o=1911856728025970#" role="button" class="filetree-link" title="Workspace"><i class="fa fa-databricks-does-not-exist fa-fw"></i><span class="filetree-display-name">Workspace</span><div class="dropdown" tabindex="0" role="button"><i class="fa fa-chevron-down"></i></div></a></li><li class="filetree-list-item has-menu"><a href="https://community.cloud.databricks.com/?o=1911856728025970#" role="button" class="filetree-link ui-droppable" title="Shared"><i class="fa fa-share-alt-square fa-fw"></i><span class="filetree-display-name">Shared</span><div class="dropdown" tabindex="0" role="button"><i class="fa fa-caret-down"></i></div></a></li><li class="filetree-list-item has-menu"><a href="https://community.cloud.databricks.com/?o=1911856728025970#" role="button" class="filetree-link ui-droppable" title="Users"><i class="fa fa-users fa-fw"></i><span class="filetree-display-name">Users</span><div class="dropdown" tabindex="0" role="button"><i class="fa fa-caret-down"></i></div></a></li></ul><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div></nav></div></div><a class="ft-scroll-angle-left hidden" href="https://community.cloud.databricks.com/?o=1911856728025970#" title="Scroll to left"><i class="fa fa-angle-left"></i></a><a class="ft-scroll-angle-right hidden" href="https://community.cloud.databricks.com/?o=1911856728025970#" title="Scroll to right"><i class="fa fa-angle-right"></i></a></div></uses-legacy-bootstrap><uses-legacy-bootstrap data-wrapped-element-id="projects-filebrowser-popup"><div id="projects-filebrowser-popup" style="display: none"><div class="filebrowser" style="display: none"></div></div></uses-legacy-bootstrap><uses-legacy-bootstrap data-wrapped-element-id="searchpanel-popup"><div id="searchpanel-popup"><div class="searchpanel ui-resizable" data-panel="Search" style="display: none" data-state="invisible"><div class="search-panel-content"><a class="ft-pin-button" title="Pin side panels"></a><div class="newsearch"><input title="Search Workspace" class="newsearch searchbox" type="text" placeholder="Search Workspace" aria-label="Search Workspace"><span class="search-mixin-spinner"><i class="fa fa-spinner fa-spin" style="text-align: center;"></i></span></div><ul aria-live="polite"></ul></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div></div></div></uses-legacy-bootstrap><div id="search-root"></div><div id="onboarding-checklist"></div><uses-legacy-bootstrap data-wrapped-element-id="title-menu"><div id="title-menu" class="tb-title-menu dropdown-menu" role="menu"></div></uses-legacy-bootstrap><uses-legacy-bootstrap data-wrapped-element-id="hidden"><div id="hidden" style="display: none"></div></uses-legacy-bootstrap><uses-legacy-bootstrap data-wrapped-element-id="history"><div id="history" style="display: none"><div id="history-head">
+  
+  <h3 class="history-title">
+    No Recent Activity
+    <i class="hide-recent-activity fa fa-remove fa-fw"></i>
+  </h3>
+  
+</div>
+
+<div id="history-list">
+  <ul>
+    
+  </ul>
+</div>
+</div></uses-legacy-bootstrap><uses-legacy-bootstrap data-wrapped-element-id="proxy-endpoints-conn-test-iframe"><div id="proxy-endpoints-conn-test-iframe" style="display: none"><iframe src="./Game Statistics Dashboard - Databricks Community Edition_files/proxy-endpoints-domain-conn-test.html" height="0" width="0" tabindex="-1" title="empty" class="hidden"></iframe></div></uses-legacy-bootstrap><uses-legacy-bootstrap data-wrapped-element-id="debugHelper"><div id="debugHelper" style="z-index: 1000; display: none; position: fixed; right: 190px; bottom: 0px"><div id="debugRoute" style="position: fixed; right: 190px; bottom: 40px"></div><div id="debugCounters" style="color: var(--primary-text-color); position: fixed; right: 50px; bottom: 20px"></div><a href="https://community.cloud.databricks.com/ops/">[OPS]</a> <a href="https://community.cloud.databricks.com/ops/debug">Debug</a> <a href="https://community.cloud.databricks.com/ops/metrics">Metrics</a> <a href="https://community.cloud.databricks.com/ops/requests">Requests</a></div></uses-legacy-bootstrap><script>function addPrefetches(paths) {
+        paths.forEach(path => {
+          var element = document.createElement('link');
+          element.rel = 'prefetch';
+          element.href = path;
+          document.getElementsByTagName('head')[0].appendChild(element);
+        })
+      }
+      setTimeout(() => {
+        addPrefetches(["/media/pin-inactive.76cfbd5a.svg","/media/jupyter_favicon.e5618ffc.svg","/media/pin-active.3f997394.svg","/media/azure_devops_logo_hover.afd8ec9e.svg","/media/azure_devops_logo.6f8531ab.svg","/media/glyphicons-halflings.191ce105.png","/media/newslablight-webfont.43dee4a4.eot","/media/newslablight-webfont.1139d78a.woff2","/media/newslablight-webfont.c8d2ffdf.woff","/media/newslablight-webfont.4d6d4f4c.ttf","/media/newslablight-webfont.6db3f979.svg","/media/databricks-regular-webfont.c3085bea.eot","/media/databricks-regular-webfont.de65de42.woff","/media/databricks-regular-webfont.977f0ff5.ttf","/media/databricks-regular-webfont.2f9a86b4.svg","/media/fontawesome-webfont.03605b24.eot","/media/fontawesome-webfont.c589f72d.woff","/media/fontawesome-webfont.45f9f92a.ttf","/media/fontawesome-webfont.d0ba16d8.svg","/media/Material-Design-Iconic-Font.6ee80f4b.woff2","/media/Material-Design-Iconic-Font.bd9b02bf.woff","/media/Material-Design-Iconic-Font.5a588d6a.ttf","/media/KaTeX_AMS-Regular.8d510e21.woff2","/media/KaTeX_AMS-Regular.363668e4.woff","/media/KaTeX_AMS-Regular.79770839.ttf","/media/KaTeX_Caligraphic-Bold.0408dbd1.woff2","/media/KaTeX_Caligraphic-Bold.dce5f226.woff","/media/KaTeX_Caligraphic-Bold.9958c13a.ttf","/media/KaTeX_Caligraphic-Regular.8cb339d8.woff2","/media/KaTeX_Caligraphic-Regular.a0f19b9a.woff","/media/KaTeX_Caligraphic-Regular.f35e6d32.ttf","/media/KaTeX_Fraktur-Bold.e9f666bf.woff2","/media/KaTeX_Fraktur-Bold.581882ea.woff","/media/KaTeX_Fraktur-Bold.6fc2b891.ttf","/media/KaTeX_Fraktur-Regular.8fafd264.woff2","/media/KaTeX_Fraktur-Regular.d3067917.woff","/media/KaTeX_Fraktur-Regular.37f0101f.ttf","/media/KaTeX_Main-Bold.e4830ce6.woff2","/media/KaTeX_Main-Bold.77475ba5.woff","/media/KaTeX_Main-Bold.b097bb94.ttf","/media/KaTeX_Main-BoldItalic.baab209e.woff2","/media/KaTeX_Main-BoldItalic.5994f793.woff","/media/KaTeX_Main-BoldItalic.4ab8a635.ttf","/media/KaTeX_Main-Italic.fdfec592.woff2","/media/KaTeX_Main-Italic.a15e0ae8.woff","/media/KaTeX_Main-Italic.ac680e98.ttf","/media/KaTeX_Main-Regular.c904829c.woff2","/media/KaTeX_Main-Regular.9d3ff6bd.woff","/media/KaTeX_Main-Regular.ad5bb259.ttf","/media/KaTeX_Math-Italic.d0dd29d1.woff2","/media/KaTeX_Math-Italic.80956401.woff","/media/KaTeX_Math-Italic.75d88e39.ttf","/media/KaTeX_SansSerif-Bold.1849da20.woff2","/media/KaTeX_SansSerif-Bold.5a8b0e8c.woff","/media/KaTeX_SansSerif-Bold.8a18ba89.ttf","/media/KaTeX_SansSerif-Italic.acb5dce2.woff2","/media/KaTeX_SansSerif-Italic.e7517a35.woff","/media/KaTeX_SansSerif-Italic.3e7cf777.ttf","/media/KaTeX_SansSerif-Regular.167f81e8.woff2","/media/KaTeX_SansSerif-Regular.1bb5e535.woff","/media/KaTeX_SansSerif-Regular.7c572bf7.ttf","/media/KaTeX_Script-Regular.49ff882d.woff2","/media/KaTeX_Script-Regular.7e1d6987.woff","/media/KaTeX_Script-Regular.c73c9054.ttf","/media/KaTeX_Size1-Regular.98c1c5ee.woff2","/media/KaTeX_Size1-Regular.6dff5232.woff","/media/KaTeX_Size1-Regular.41fbe509.ttf","/media/KaTeX_Size2-Regular.9f44db0b.woff2","/media/KaTeX_Size2-Regular.758926c6.woff","/media/KaTeX_Size2-Regular.8f1e2ab9.ttf","/media/KaTeX_Size3-Regular.943a01ec.woff2","/media/KaTeX_Size3-Regular.d27d182e.woff","/media/KaTeX_Size3-Regular.32abfb10.ttf","/media/KaTeX_Size4-Regular.31bd0319.woff2","/media/KaTeX_Size4-Regular.47db69ec.woff","/media/KaTeX_Size4-Regular.9ee4a1fd.ttf","/media/KaTeX_Typewriter-Regular.aa9fe3f6.woff2","/media/KaTeX_Typewriter-Regular.663eef93.woff","/media/KaTeX_Typewriter-Regular.73160645.ttf","/media/fontawesome-webfont.8b43027f.eot","/media/fontawesome-webfont.20fd1704.woff2","/media/fontawesome-webfont.f691f37e.woff","/media/fontawesome-webfont.1e59d233.ttf","/media/fontawesome-webfont.c1e38fd9.svg","/media/spritemap.ac65e273.png","/media/spritemap@2x.7410259a.png","/media/SourceCodePro-Regular.otf.b886e5e4.woff2","/media/SourceCodePro-Bold.otf.0fab52a9.woff2","/media/spinner_green.64cba84f.svg","/media/spinner_red.dfdea22c.svg","/login/login.47926ab1.js","/js/main.28c3e037.js","/js/metrics-graphics.240ef397.js","/login/7251.95fc2945.chunk.css","/login/7251.8c659cfe.chunk.js","/media/BMT_logo_large.06a08317.svg","/media/databricks_community_edition.2359b37e.png","/login/6499.fedff81a.chunk.js","/login/7603.aa36561a.chunk.js","/css/1349.6b186478.chunk.css","/js/1349.2e50bb47.chunk.js","/media/partner-connect-icon.8a202243.svg","/media/alert.49c5db30.svg","/media/blocked.a81a311f.svg","/media/book.31f15827.svg","/media/branch.3a7e8c0d.svg","/media/cancelled.2ad6d232.svg","/media/circle_error.e3c3b9a4.svg","/media/cloud.8b8c5eb0.svg","/media/cluster.4a93f2e9.svg","/media/dashboard.8758e581.svg","/media/data-quality.1e5b9672.svg","/media/expand-icon-flipped.77c0871a.svg","/media/fa-columns.76f151f6.svg","/media/fa-table.015b0dc7.svg","/media/failed.789ca99e.svg","/media/filled-gray-circle.7d2d5039.svg","/media/filled-green-circle.ed636499.svg","/media/folder.78745b36.svg","/media/paused.536d6b5d.svg","/media/pending.b8ba238e.svg","/media/query.35fed909.svg","/media/running.ec723323.svg","/media/skipped.b25c88c7.svg","/media/spinner_blue.8d29a816.svg","/media/success.a741e81b.svg","/media/table.7b8cc615.svg","/media/terminated.63ea598d.svg","/media/timed_out.3857e04c.svg","/media/waiting.6f50f9b4.svg","/media/warning.6198e47b.svg","/login/9882.7556e9e0.chunk.js","/login/7043.21b43089.chunk.js","/login/8062.11dbe846.chunk.js","/login/2957.9f99525d.chunk.js","/login/5649.7878ab16.chunk.js","/login/8538.9a6cf4ae.chunk.js","/login/969.6bf80188.chunk.js","/login/862.51b04181.chunk.js","/login/5396.b306568e.chunk.js","/login/9565.9ad08ba9.chunk.js","/login/462.952815d1.chunk.js","/js/9820.5bab95cf.chunk.js","/css/639.768a06d7.chunk.css","/js/639.d8276d0a.chunk.js","/css/8730.f2124aac.chunk.css","/js/8730.7b113aba.chunk.js","/js/6537.6e212bcd.chunk.js","/media/stitch.34c97b52.svg","/media/fivetran.5bb015fe.png","/media/infoworks.7df5f41f.png","/media/qlik.4c6468fd.png","/media/streamsets.3710f31a.png","/media/syncsort.44d5ff89.jpg","/css/GraphqlClustersGetPage.20009756.chunk.css","/js/6471.6b9e370f.chunk.js","/css/NewClustersEditPage.09fbd5ef.chunk.css","/js/4602.7ab61ee7.chunk.js","/css/ClustersMainPage.1c9a080c.chunk.css","/js/2851.a766ba08.chunk.js","/css/SimpleClusterCreatePage.09fbd5ef.chunk.css","/js/7028.313d9947.chunk.js","/css/ClustersCreatePage.09fbd5ef.chunk.css","/js/9463.da593c56.chunk.js","/css/PoolRoutesPages.8e6dfbe2.chunk.css","/js/7274.b3176703.chunk.js","/css/ClusterPoliciesRouteUtils.f3101d86.chunk.css","/js/8540.8d62df5e.chunk.js","/js/3235.b0c75e7f.chunk.js","/css/AdminConsoleView.3cd1bba7.chunk.css","/js/5198.cfc4bbcc.chunk.js","/css/UserSettingsView.92c8234c.chunk.css","/js/9152.ecb54c6d.chunk.js","/media/if_lightbulb.5e2e71fa.svg","/js/6362.27654e8a.chunk.js","/media/import_illustration.4151f89c.svg","/media/notebook_illustration.d0d5ad3b.svg","/media/partner_connect_illustration.8a202243.svg","/media/quickstart_illustration.3c391acf.svg","/media/references_illustration.e67339f9.svg","/js/7032.7572d7be.chunk.js","/media/General_icon.78cbb670.svg","/media/Python_icon.b89e5ec9.svg","/media/R_icon.c159ddc0.svg","/media/Scala_icon.d90ef464.svg","/media/add_data_icon.3b26b6be.svg","/media/code_icon.16b52873.svg","/media/help_doc_icon.679cb6f8.svg","/media/icon-import-data.2fb512d3.svg","/media/icon-new-notebook.2bc783e0.svg","/media/icon-quickstart-notebook.62cf29ed.svg","/media/icon-upload-data-non-drop-zone.e76fe775.svg","/media/icon-upload-data.3e579a80.svg","/media/persona_nav.35794a3b.gif","/css/LibraryView.2e69635a.chunk.css","/js/2662.beedbf76.chunk.js","/js/1511.12475684.chunk.js","/css/ClustersGetMetricsPage.09fbd5ef.chunk.css","/js/5355.bcf82c4c.chunk.js","/js/5148.d308de7a.chunk.js","/css/PipelinesMainPage.46640809.chunk.css","/js/1710.eab7735c.chunk.js","/js/7676.a3d7a7ae.chunk.js","/media/collapsingAllIcon.734ff2cb.svg","/media/expandingAllIcon.53164af4.svg","/js/3214.ae272d39.chunk.js","/js/2667.346c259c.chunk.js","/media/ml_dashboard_ill_automl.e024a05f.svg","/media/ml_dashboard_ill_feature_store.37dd40c0.svg","/media/ml_dashboard_ill_notebook.2993bcc7.svg","/media/ml_dashboard_ill_reference_solutions.8093cd75.svg","/media/ml_dashboard_ill_training.095fbd61.svg","/css/ExperimentObservatoryPage.eae8a832.chunk.css","/js/3637.5912802f.chunk.js","/css/AutoMLConfigurationPage.3af21a7b.chunk.css","/js/2689.7b6b2141.chunk.js","/js/9981.ab3e6f39.chunk.js","/js/5197.fc4b3e76.chunk.js","/js/8732.cb41214f.chunk.js","/js/3449.d55be0e4.chunk.js","/js/199.4c6eb3b4.chunk.js","/js/4286.b1e59071.chunk.js","/js/2384.691a4cb0.chunk.js","/js/3345.5e60f27e.chunk.js","/css/CreateWorkspaceLibraryPage.a7702194.chunk.css","/js/8553.b7373a0f.chunk.js","/css/CreateMlflowExperimentPage.ee2d4c7e.chunk.css","/js/6595.ae5d909c.chunk.js","/css/ScheduleLink.1a0cef1f.chunk.css","/js/7994.f058ec6c.chunk.js","/js/419.a53bb5a3.chunk.js","/css/ReactNotebookView.68ddf7ec.chunk.css","/js/9957.e844fe05.chunk.js","/media/placeholder_pic.157f088b.png","/media/tabbed_results_announce.2c4b9566.gif","/css/DashboardEditView.ea078db7.chunk.css","/js/2882.03efce2b.chunk.js","/css/DashboardPresentView.fceb6112.chunk.css","/js/8985.c89f21e8.chunk.js","/css/TableGetPage.e5f37737.chunk.css","/js/4227.63f45c4a.chunk.js","/js/2184.8a58eb28.chunk.js","/js/8155.c9616b56.chunk.js","/js/5402.61f8dd3d.chunk.js","/js/5244.61ebb5cb.chunk.js","/css/2009.09fbd5ef.chunk.css","/js/2009.05795c52.chunk.js","/media/mlflow_cluster_libraries_icon.adffc652.svg","/media/mlflow_cluster_spec_icon.001d116c.svg","/media/mlflow_notebook_revision_icon.8f838dbc.svg","/js/3080.c9c93b1f.chunk.js","/js/5290.536d9da4.chunk.js","/media/logged_model.dd9b21ff.svg","/media/registered_model.f2b0e698.svg","/media/view_notebook_revision.06996110.svg","/js/4136.0c92b01d.chunk.js","/js/5122.77668f56.chunk.js","/media/countries.geo.da867aec.json","/media/japan.prefectures.geo.503032a2.json","/media/usa-albers.geo.4d6ceca8.json","/js/2713.f27cb942.chunk.js","/js/7561.8de45682.chunk.js","/js/265.3ad79cf4.chunk.js","/js/3961.0340df6c.chunk.js","/js/6874.fdee06a1.chunk.js","/css/6823.ef02c8db.chunk.css","/js/1435.b44077be.chunk.js","/js/9897.3e95fdd2.chunk.js","/css/9018.b0960582.chunk.css","/css/3061.632ce97e.chunk.css","/js/2368.b5d6b718.chunk.js","/js/2241.296f6c2a.chunk.js","/js/1831.b4e9f747.chunk.js","/css/8687.8261acdc.chunk.css","/js/8687.d29f7892.chunk.js","/js/5449.26bbd0de.chunk.js","/js/3315.cbbda80a.chunk.js","/js/5463.c0497674.chunk.js","/js/6373.1f043b2c.chunk.js","/js/4817.92a286de.chunk.js","/js/9487.6d0c3e50.chunk.js","/js/4005.60ef1ef1.chunk.js","/css/7177.8239daa4.chunk.css","/js/7177.f2a13d4d.chunk.js","/js/9982.52705ede.chunk.js","/js/8561.36bc28be.chunk.js","/js/9622.32eaae8f.chunk.js","/js/7682.dcc39dcc.chunk.js","/js/1202.1651745c.chunk.js","/js/296.352a2fd9.chunk.js","/js/615.7b5a7f25.chunk.js","/login/5126.1b33304e.chunk.css","/login/5126.a3d96d5a.chunk.js","/js/5526.775fd734.chunk.js","/js/3112.229db2c0.chunk.js","/css/9097.b7c5aca9.chunk.css","/js/789.7055c3e7.chunk.js","/js/6122.a583f800.chunk.js","/js/3953.bc4a0338.chunk.js","/js/5850.b9610775.chunk.js","/css/8473.a91be41f.chunk.css","/js/8473.6d11cc58.chunk.js","/css/9822.c697d92c.chunk.css","/js/9822.a6f219f0.chunk.js","/js/1826.3f8ee844.chunk.js","/login/7628.be1062f4.chunk.js","/js/2180.77c8b226.chunk.js","/js/3949.0ba9a432.chunk.js","/js/177.7d26e136.chunk.js","/js/2122.aeb0bf45.chunk.js","/js/7414.0d648cb1.chunk.js","/js/6638.2cdb7ba7.chunk.js","/js/6617.d700873b.chunk.js","/js/4287.8519cc0d.chunk.js","/js/740.1ba53506.chunk.js","/js/7973.74903f69.chunk.js","/js/2131.0a22c001.chunk.js","/js/5489.e0232314.chunk.js","/js/2717.5976e517.chunk.js","/media/us-map.6cab3846.json","/media/world-map.282fccf1.json","/media/ellipse-2s-30px.df5b6e08.gif","/js/3584.5b823085.chunk.js","/js/520.57827eea.chunk.js","/js/6267.26b62d2c.chunk.js","/js/1342.f3c1945c.chunk.js","/js/736.24f4531e.chunk.js","/js/400.ee52265e.chunk.js","/js/8827.4a78799d.chunk.js","/login/8484.2264fc4c.chunk.js","/media/spinner.7aa77051.svg","/media/bmt-favicon.dfa4ca84.ico","/js/7814.06c77740.chunk.js","/js/9418.cfc92d91.chunk.js","/js/2630.4613696c.chunk.js","/js/367.378e8204.chunk.js","/js/1913.37480a3a.chunk.js","/js/3846.23b54ba1.chunk.js","/js/2205.cbbcc38e.chunk.js","/js/8397.bb51b0f1.chunk.js","/js/4332.4717d0c6.chunk.js","/js/2960.d7334d50.chunk.js","/js/5397.089d60be.chunk.js","/js/9628.69417888.chunk.js","/js/9167.c719483d.chunk.js","/js/4188.000cbe6c.chunk.js","/js/438.be5d16dd.chunk.js","/static/media/spinner.gif","/login/DB_Azure_Lockup_2x.png","/login/bootstrap.min.css","/login/databricks_ce_icon.svg","/login/databricks_logoTM_rgb_TM.svg","/login/favicon.ico","/login/logo_2020/azure_databricks.png","/login/logo_2020/databricks.svg","/login/logo_2020/databricks_community_edition.png","/delta_sharing/databricks.svg","/delta_sharing/download.svg","/delta_sharing/retrieve_config.html","/delta_sharing/sharing.css","/delta_sharing/sharing.js","/delta_sharing/logo/apachespark.png","/delta_sharing/logo/atscale.png","/delta_sharing/logo/azuresynapse.png","/delta_sharing/logo/bigquery.png","/delta_sharing/logo/databricks.png","/delta_sharing/logo/dremio.png","/delta_sharing/logo/looker.png","/delta_sharing/logo/pandas.png","/delta_sharing/logo/powerbi.png","/delta_sharing/logo/presto.png","/delta_sharing/logo/python.png","/delta_sharing/logo/qlik.png","/delta_sharing/logo/starburst.png","/delta_sharing/logo/tableau.png","/delta_sharing/logo/trino.png","/static/iframe.html","/static/css/sparkui-iframe.css","/static/js/heap/heap-1473692602.js","/static/js/heap/heap-210092139.js","/static/js/heap/heap-3428506230.js","/favicon.ico","/login.html",])
+      }, 30000)</script><div id="emotion-container-webapp-css"><style data-emotion="webapp-css" data-s=""></style></div><uses-legacy-bootstrap><div class="filebrowser-context-menu dropdown-menu" tabindex="-1"></div></uses-legacy-bootstrap><canvas style="display: none;"></canvas><uses-legacy-bootstrap>
+          
+        </uses-legacy-bootstrap></body></html>

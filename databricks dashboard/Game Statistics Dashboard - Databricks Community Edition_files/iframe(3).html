@@ -1,0 +1,181 @@
+
+<!-- saved from url=(0278)https://cyfz9iort0w.cloud.databricksusercontent.com/static/13608d3d3e59e63532a6bcf1969d7ec217835bbabf4a4378f4ce84a110daaa2a/static/iframe.html#%7B%22parentUri%22%3A%22https%3A%2F%2Fcommunity.cloud.databricks.com%22%2C%22frameId%22%3A%225ff0027e-0342-495e-986c-b52ca535c132%22%7D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style>
+    
+/**
+ * NB: this stylesheet is loaded inline in sandboxed HTML iframes that may contain
+ * arbitrary untrusted content.  Be very careful what rules you add here.
+ */
+body, .mfe-root {
+  background-color: transparent;
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#content-wrapper {
+  overflow: auto;
+}
+
+#content-wrapper .markdown {
+  /**
+   * without overriding this, the height is 100% (of the containing block), which is
+   * initially quite small. The content will not fit, and will then depend on the
+   * `overflow` property, which is `hidden`. In theory, `overflow: visible` will expand the
+   * height to fit, but it has a bad interaction with postResizeMessage which causes the div
+   * to keep growing in size under _some_ (ES-9273) circumstances. `height: auto` has the same
+   * effect of allowing the browser to size the div but without the bad effects.
+   **/
+  height: auto;
+}
+
+/**
+ * Approximates the JupyterLab Light theme for display of pandas-like DataFrames.
+ *
+ * TODO: JupyterLab parameterizes theme-able properties using CSS variables.  This
+ * implementation hard-codes them.
+ */
+.dataframe {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  table-layout: fixed;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+.dataframe thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+.dataframe tr {
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe th {
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.dataframe tbody tr:nth-child(odd) {
+  background: white;
+}
+.dataframe tbody tr:nth-child(even) {
+  background: #f5f5f5;
+}
+.dataframe tbody tr:hover {
+  background-color: rgb(218, 242, 254);
+}
+.dataframe tbody tr th:only-of-type {
+  vertical-align: middle;
+}
+.dataframe tbody td {
+  font-size: 12px;
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+
+/**
+ * CSS Variables to override the data summary (Data Profile) output
+ */
+#facets {
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'FontAwesome';
+}
+
+.db-summary-container .db-summary-items {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'FontAwesome';
+}
+
+  </style>
+  <!--<base href="https://community.cloud.databricks.com" target="_blank">--><base href="." target="_blank">
+  <script>
+    (function() {
+      var parentUri = 'https://community.cloud.databricks.com';
+      var originalWidth = null;
+      var originalHeight = null;
+      var scale = 1.0;
+      window.onerror = function(error) {
+        window.parent.postMessage({
+          type: 'frameJsError',
+          loc: window.location.href,
+          frameId: '5ff0027e-0342-495e-986c-b52ca535c132',
+          error: error,
+        }, parentUri);
+      };
+      function postResizeMessage() {
+        // There are 3 cases, and we take the first that's available
+        // 1) happy path: content is inlined. We use getBoundingClientRect to capture the dimension
+        //    of (scaled) visible content, including the margin.
+        //    {height, width} is captured via {bottom, right} to include any margin {top, left}.
+        //    This will handle both when there's collapsing margin & not. See go/pr/43508
+        // 2) content is loaded dynamically, in which case getBoundingClientRect().height may be 0.
+        //    we use scroll{Width, Height} to capture the dimension regardless of what's currently
+        //    visible.
+        // 3) source in the iframe attaches to the document body and not the content-wrapper.
+        //    we use document.body.scroll{Width, Height}. See ES-3770
+        var wrapper = document.getElementById('content-wrapper');
+        var rect = wrapper.getBoundingClientRect();
+        var newWidth = (scale && rect.right / scale) || wrapper.scrollWidth || document.body.scrollWidth;
+        var newHeight = (scale && rect.bottom / scale) || wrapper.scrollHeight || document.body.scrollHeight;
+        if (Math.round(newWidth) != Math.round(originalWidth) || Math.round(newHeight) != Math.round(originalHeight)) {
+          originalWidth = newWidth;
+          originalHeight = newHeight;
+          window.parent.postMessage({
+            type: 'frameResizeEvent',
+            frameId: '5ff0027e-0342-495e-986c-b52ca535c132',
+            loc: window.location.href,
+            height: originalHeight,
+            width: originalWidth,
+            isAutoScaled: true,
+          }, parentUri);
+        }
+      };
+      // Sync size 4 times per second
+      setInterval(postResizeMessage, 250);
+
+      window.addEventListener('message', function(msg) {
+        var origin = msg.origin || msg.originalEvent.origin;
+        var isExportedHTML = origin === 'null' && parentUri === '*';
+        if (origin !== parentUri && !isExportedHTML) {
+          console.error('Invalid origin', origin, parentUri);
+          return;
+        }
+
+        
+        if (msg.data.type === 'frameSizedEvent') {
+          var xRatio = msg.data.frameWidth / originalWidth;
+          var yRatio = msg.data.frameHeight / originalHeight;
+          scale = 1.0;
+          if (xRatio < 1 || yRatio < 1) {
+            scale = Math.min(xRatio, yRatio);
+          }
+          document.body.style['transform'] = 'scale(' + scale + ')';
+          document.body.style['transformOrigin'] = 'top left';
+          var wrapper = document.getElementById('content-wrapper');
+          wrapper.style['overflow'] = 'inherit';
+        }
+        
+      });
+      
+    })();
+  </script>
+  </head><body style="transform: scale(1); transform-origin: left top;"><div id="content-wrapper" class="" style="overflow: inherit;"><center><h1 style="color:red"> Predictions for the Games in Progress </h1></center>
+  </div></body></html>
