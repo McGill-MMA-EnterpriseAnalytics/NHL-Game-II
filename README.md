@@ -113,7 +113,7 @@ We explored another option to productionize the machine learning model using doc
 
 Further, on User Interface we tried Streamlit and basic Flask API using Postman along with Swagger API, however went with swagger for testing in GCP as we were able to incorporate GET and POST feature in application and was easy to integrate on Cloud.
 
-On Autiomation, cron job for triggering pickle file and updating docker which will refresh the simulator/app was built and tested on local environment. full access to tools/softwares instead of trial or community version can help to implement on cloud and live environment. It is a part of future scope.
+On Automation, cron job for triggering pickle file and updating docker which will refresh the simulator/app was built and tested on local environment. full access to tools/softwares instead of trial or community version can help to implement on cloud and live environment. It is a part of future scope.
 
 ## Tools/Softwares/Programming Languages used,
 Python, Databricks, Databricks delta lake/visualization features, Docker desktop, Google cloud platform (container registry, kubernetes, vm instance), GITHub, Streamlit, Swagger, Flask API, Postman, Anaconda
