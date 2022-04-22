@@ -1,0 +1,10 @@
+shots,shots_against,goals,goals_against,takeaways,takeaways_against,hits,hits_against,blocked_shots,blocked_shots_against,giveaways,giveaways_against,missed_shots,missed_shots_against,penalities,penalities_against,won_faceoffs,lost_faceoffs,hoa_away,hoa_home
+8,8,1,3,1,3,14,5,3,3,6,7,4,0,1,1,10,12,1,0
+8,8,3,0,3,1,5,12,3,3,7,6,0,4,1,1,12,10,0,1
+11,12,0,1,0,2,4,4,6,6,2,0,6,2,1,3,11,9,0,1
+12,11,1,0,2,0,4,4,8,6,0,2,3,6,3,1,9,11,0,1
+9,8,0,1,3,2,4,5,7,1,7,5,3,8,2,1,6,14,1,0
+8,9,1,0,2,3,5,3,1,7,5,7,4,3,1,2,11,7,0,1
+4,8,0,0,5,5,12,5,3,4,2,2,3,3,1,3,5,12,1,0
+7,4,1,0,5,4,5,12,4,3,2,2,3,3,3,1,12,4,0,1
+5,19,0,1,2,4,9,6,3,3,4,5,2,6,5,3,7,11,1,0
