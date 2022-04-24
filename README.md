@@ -22,17 +22,17 @@ Please notice that there could be documents of previous versions. Here are the l
 - [Productionization](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/tree/main/docker_kubernetes):
   - Main Files (used for docker container, kubernetes cluster deployed on GCP)
     - Dockerfile: [Dockerfile](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/docker_kubernetes/Dockerfile)
-    - Classifier.pkl
-    - requirements.txt (containes relevant packages needed to run ML model and Front end application)
-    - swagger_api.py (Front end application)
+    - Pickle File: [Classifier.pkl](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/docker_kubernetes/Classifier.pkl)
+    - Requirement: [requirements.txt](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/docker_kubernetes/requirements.txt) (Note: containes relevant packages needed to run ML model and Front end application)
+    - Front End App: [swagger_api.py](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/docker_kubernetes/swagger_api.py) (Front end application)
   - Reference files
-    - Betting_Model.ipynb (sample of model script used to build pickle file)
-    - flask_api.py (Basic user interface built using postman in local)
-    - streamlit_api.py (Another front end application built using streamlit in local)
-    - train.csv (sample of train data)
-    - test.csv (sample of test data)
-    - docker_kubernetes_gcp_cmds.txt (commands used to setup application using docker and kubernetes in GCP cloud shell)
-    - nhl_app_arch_v1.pptx
+    - Model sample script: [Betting_Model.ipynb](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/docker_kubernetes/Betting_Model.ipynb) (Note: sample of model script used to build pickle file)
+    - Flask Script: [flask_api.py](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/docker_kubernetes/flask_api.py) (Note: Basic user interface built using postman in local)
+    - Streamlit Script: [streamlit_api.py](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/docker_kubernetes/streamlit_api.py) (Note: Another front end application built using streamlit in local)
+    - Train data sample: [train.csv](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/docker_kubernetes/train.csv) 
+    - Test data sample: [test.csv](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/docker_kubernetes/test.csv)
+    - Commands for APP setup on GCP: [docker_kubernetes_gcp_cmds.txt](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/docker_kubernetes/docker_kubernetes_gcp_cmds.txt) (commands used to setup application using docker and kubernetes in GCP cloud shell)
+    - Architecture: [nhl_app_arch_v1.pptx](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/docker_kubernetes/nhl_app_arch_v1.pptx)
   
   Note: In GCP swagger was used and streamlit and flask/postman user interface were tested in local.
 
