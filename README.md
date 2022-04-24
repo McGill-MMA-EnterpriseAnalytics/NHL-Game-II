@@ -21,7 +21,7 @@ Please notice that there could be documents of previous versions. Here are the l
 
 - [Productionization](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/tree/main/docker_kubernetes):
   - Main Files (used for docker container, kubernetes cluster deployed on GCP)
-    - Dockerfile
+    - Dockerfile: [Dockerfile](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/docker_kubernetes/Dockerfile)
     - Classifier.pkl
     - requirements.txt (containes relevant packages needed to run ML model and Front end application)
     - swagger_api.py (Front end application)
