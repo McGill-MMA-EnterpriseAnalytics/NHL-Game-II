@@ -152,7 +152,7 @@ On Automation, cron job for triggering pickle file and updating docker which wil
 Link to video: https://youtu.be/G3p21FtN3ss
 
 ## Tools/Softwares/Programming Languages used,
-Python, Databricks, Databricks delta table, visualization features, Docker desktop, Google cloud platform (container registry, kubernetes, vm instance), GITHub, Streamlit, Swagger, Flask API, Postman, Anaconda
+Python, Databricks, Databricks delta table, databricks visualization features, Docker desktop, Google cloud platform (container registry, kubernetes, vm instance), GITHub, Streamlit, Swagger, Flask API, Postman, Anaconda
 
 
 ## Acknowledgements
