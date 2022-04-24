@@ -16,6 +16,7 @@ Please notice that there could be documents of previous versions. Here are the l
   - Drift Detection: [DriftDetection.ipynb](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/modeling/DriftDetection.ipynb)
   - Hyperparameter tuning: [Hyperparameter tuning.ipynb](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/modeling/Hyperparameter%20tuning.ipynb)
   - Model performance: [ModelPerformance.ipynb](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/modeling/ModelPerformance.ipynb)
+  - Data Storage: [Games_Storage_Final.ipynb](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/dd2771a62011ac7ab9d11984bfe1a7f59dff7191/nhl_db/Games_Storage_Final.ipynb)
 
 - [Productionization](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/tree/main/docker_kubernetes):
   - Main Files (used for docker container, kubernetes cluster deployed on GCP)
@@ -134,7 +135,7 @@ Further, on User Interface we tried Streamlit and basic Flask API using Postman 
 On Automation, cron job for triggering pickle file and updating docker which will refresh the simulator/app was built and tested on local environment. full access to tools/softwares instead of trial or community version can help to implement on cloud and live environment. It is a part of future scope.
 
 ## Tools/Softwares/Programming Languages used,
-Python, Databricks, Databricks delta lake/visualization features, Docker desktop, Google cloud platform (container registry, kubernetes, vm instance), GITHub, Streamlit, Swagger, Flask API, Postman, Anaconda
+Python, Databricks, Databricks delta table, visualization features, Docker desktop, Google cloud platform (container registry, kubernetes, vm instance), GITHub, Streamlit, Swagger, Flask API, Postman, Anaconda
 
 
 
