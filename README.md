@@ -138,7 +138,7 @@ The optimal F1 score is 0.6611.
 ### Dashboards
 We created two dashboards in total. One is for the model prediction, and one is for the streaming data.
 
-For the dashboard of model prediction, we utilized the dashboard function in Databricks to create dashboard directly from our code. You can find the dashboard here [Dashboard_prediction.png](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/modeling/Dashboard/Dashboard_prediction.png).
+For the dashboard of model prediction, we utilized the dashboard function in Databricks to create dashboard directly from our code. You can find the dashboard here [Dashboard_prediction.png](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/databricks%20dashboard/Dashboard_prediction.png).
 
 The code for the dashboard with information on daily games and the winner prediction is in the [databricks dashboard folder](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/tree/main/databricks%20dashboard).
 
@@ -151,8 +151,6 @@ On Automation, cron job for triggering pickle file and updating docker which wil
 
 ## Tools/Softwares/Programming Languages used,
 Python, Databricks, Databricks delta table, visualization features, Docker desktop, Google cloud platform (container registry, kubernetes, vm instance), GITHub, Streamlit, Swagger, Flask API, Postman, Anaconda
-
-
 
 
 ## Acknowledgements
