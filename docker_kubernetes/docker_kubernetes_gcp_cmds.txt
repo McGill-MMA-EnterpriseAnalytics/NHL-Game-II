@@ -1,0 +1,42 @@
+##########################################
+#GCP cloud shell comands
+
+#to delete existing folder 
+rm -rf NHL-Game-II
+
+#application set up commands
+git clone https://github.com/pycaret/pycaret-deployment-google.git
+
+export PROJECT_ID=nimble-augury-196410
+
+docker build -t gcr.io/${PROJECT_ID}/nhl-app:v1 .
+
+docker images
+
+gcloud auth configure-docker
+
+docker push gcr.io/${PROJECT_ID}/nhl-app:v1
+
+gcloud config set project $PROJECT_ID 
+gcloud config set compute/zone us-central1
+
+gcloud container clusters create nhl-cluster --num-nodes=1
+
+kubectl create deployment nhl-app --image=gcr.io/${PROJECT_ID}/nhl-app:v1
+
+kubectl expose deployment nhl-app --type=LoadBalancer --port 80 --target-port 8000
+
+kubectl get service
+
+
+##############################
+docker in local
+
+docker build -t nhl_api .
+docker run -p 8000:8000 nhl_api
+
+##############################
+hosting streamlit app on local
+
+streamlit run streamlit_api.py
+
