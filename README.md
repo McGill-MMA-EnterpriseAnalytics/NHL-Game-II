@@ -13,7 +13,7 @@ NHL-Game Part 2 (Productionisation) Analysis 🥅 🏒
 Please notice that there could be documents of previous versions. Here are the links for documents of final versions.
 - [Modelling & streaming data](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/tree/main/modeling):
   - Final modelling: [Final_Model_Merged.ipynb](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/modeling/Final_Model_Merged.ipynb)
-  - Note: this file contains the DeepCheck report output
+  -- Note: this file contains the DeepCheck report output
   - Drift Detection: [DriftDetection.ipynb](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/modeling/DriftDetection.ipynb)
   - Drift Detection (DataBricks version): [DriftDetection_DataBricks](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/modeling/DriftDetection_DataBricks.ipynb)
   - Hyperparameter tuning: [Hyperparameter tuning.ipynb](https://github.com/McGill-MMA-EnterpriseAnalytics/NHL-Game-II/blob/main/modeling/Hyperparameter%20tuning.ipynb)
